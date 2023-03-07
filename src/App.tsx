@@ -1,38 +1,51 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import { Box, ChakraProvider } from "@chakra-ui/react";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import GZHeader from "./components/organisms/global/header";
+import GZSidebar from "./components/organisms/global/sidebar";
+import GZLoginPage from "./components/pages/auth/login";
+import GZUserProfilePage from "./components/pages/auth/user-profile";
+import GZUserProfileEditPage from "./components/pages/auth/user-profile/edit";
+import { LAYOUT_SETTING } from "./constants";
+import { APP_ROUTE } from "./constants/route";
+import theme from "./theme/config";
+
+
+const AppLayout = () => (
+  <>
+    <GZSidebar />
+    <GZHeader />
+    <Box
+      ms={LAYOUT_SETTING.SIDEBAR_WIDTH}
+      mt={LAYOUT_SETTING.HEADER_HEIGHT}
+      px="44px"
+      py="40px"
+    >
+      <Outlet />
+    </Box>
+  </>
+);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <GZLoginPage />,
+  },
+  {
+    element: <AppLayout />,
+    children: [
+      {
+        path: APP_ROUTE.USER_PROFILE,
+        element: <GZUserProfilePage />
+      },
+      {
+        path: APP_ROUTE.EDIT_PROFILE,
+        element: <GZUserProfileEditPage />
+      },
+    ],
+  }
+]);
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
+    <RouterProvider router={router} />
   </ChakraProvider>
 )
