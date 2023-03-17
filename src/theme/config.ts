@@ -108,7 +108,7 @@ const theme = extendTheme({
             _placeholder: {
               color: "#94A7C6",
             },
-          }
+          },
         },
       },
       sizes: {

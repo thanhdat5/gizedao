@@ -2,13 +2,13 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import GZHeader from "./components/organisms/global/header";
 import GZSidebar from "./components/organisms/global/sidebar";
+import GZCreateDAOPage from "./components/pages/auth/create-dao";
 import GZLoginPage from "./components/pages/auth/login";
 import GZUserProfilePage from "./components/pages/auth/user-profile";
 import GZUserProfileEditPage from "./components/pages/auth/user-profile/edit";
 import { LAYOUT_SETTING } from "./constants";
 import { APP_ROUTE } from "./constants/route";
 import theme from "./theme/config";
-
 
 const AppLayout = () => (
   <>
@@ -34,18 +34,22 @@ const router = createBrowserRouter([
     children: [
       {
         path: APP_ROUTE.USER_PROFILE,
-        element: <GZUserProfilePage />
+        element: <GZUserProfilePage />,
       },
       {
         path: APP_ROUTE.EDIT_PROFILE,
-        element: <GZUserProfileEditPage />
+        element: <GZUserProfileEditPage />,
+      },
+      {
+        path: APP_ROUTE.CREATE_DAO,
+        element: <GZCreateDAOPage />,
       },
     ],
-  }
+  },
 ]);
 
 export const App = () => (
   <ChakraProvider theme={theme}>
     <RouterProvider router={router} />
   </ChakraProvider>
-)
+);
