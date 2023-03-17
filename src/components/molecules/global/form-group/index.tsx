@@ -4,6 +4,7 @@ import {
   FormHelperText,
   FormLabel,
   Input,
+  Text,
 } from "@chakra-ui/react";
 
 type GZFormGroupProps = {
@@ -17,6 +18,7 @@ type GZFormGroupProps = {
   labelColor?: string;
   required?: boolean;
   name?: string;
+  optional?: boolean;
 };
 const GZFormGroup = ({
   type = "text",
@@ -29,6 +31,7 @@ const GZFormGroup = ({
   labelColor,
   required = false,
   name,
+  optional = false,
 }: GZFormGroupProps) => {
   return (
     <FormControl mb="24px" isInvalid={isError} isRequired={required}>
@@ -41,6 +44,16 @@ const GZFormGroup = ({
         letterSpacing="0.01em"
       >
         {label}
+        {optional && (
+          <Text
+            fontSize="16px"
+            color="rgba(255,255,255,0.6)"
+            display="inline-block"
+            ml="6px"
+          >
+            (optional)
+          </Text>
+        )}
       </FormLabel>
       <Input
         type={type}

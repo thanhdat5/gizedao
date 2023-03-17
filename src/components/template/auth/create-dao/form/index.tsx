@@ -22,10 +22,12 @@ import GZSelect from "../../../../molecules/global/select";
 const GZDAOCreateForm = () => {
   return (
     <Formik
-      initialValues={{}}
-      onSubmit={(values, action) => {
-        console.log(values);
-      }}
+      initialValues={{ name: "", website: "" }}
+      onSubmit={(values, action) => {}}
+      // validate={(values) => {
+      //   // validate here
+      //   console.log("-----values-----", values);
+      // }}
     >
       {({ values, handleChange }) => (
         <Form>
@@ -53,7 +55,16 @@ const GZDAOCreateForm = () => {
 
               <Box my="10px">
                 <GZSelect
-                  data={["Option 1", "Option 2", "Option 3"]}
+                  data={[
+                    "Sui mainnet",
+                    "Sui devnet",
+                    "Sui testnet",
+                    "Binance Smart Chain testnet",
+                    "Binance Smart Chain mainnet",
+                    "Optimism Kovan",
+                    "Optimism mainnet",
+                    "Ethereum Goerli testnet",
+                  ]}
                   label="Chain"
                   placeholder="Choose your network"
                   name="chain"
@@ -68,7 +79,7 @@ const GZDAOCreateForm = () => {
                   type="text"
                   placeholder="Name of your organization"
                   labelColor="#BFCFE8"
-                  // required
+                  required
                   onValueChange={handleChange}
                 />
               </Box>
@@ -94,26 +105,29 @@ const GZDAOCreateForm = () => {
                   label="Categorie(s)"
                   placeholder="Choose your category"
                   name="category"
-                  // required
+                  required
                 />
               </Box>
 
               <Box my="10px">
                 <GZIconInput
-                  label="Website (optional)"
+                  label="Website"
                   icon={<GZIconSocialWebsite />}
                   placeholder="e.g.https://espstarter.com"
                   name="website"
+                  optional
+                  onValueChange={handleChange}
                 />
               </Box>
 
               <Box my="10px">
                 <GZFormGroup
-                  label="Public URL (optional)"
+                  label="Public URL"
                   type="text"
                   placeholder="Enter your public URL"
                   labelColor="#BFCFE8"
                   name="url"
+                  optional
                 />
               </Box>
               <Box my="26px">

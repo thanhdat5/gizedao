@@ -30,7 +30,14 @@ const GZSelect = ({
         onChange={onChangeValue}
       >
         {data.map((option) => (
-          <option value={option}>{option}</option>
+          <option
+            value={option}
+            style={{
+              background: "#1A2335",
+            }}
+          >
+            {option}
+          </option>
         ))}
       </Select>
     </FormControl>
