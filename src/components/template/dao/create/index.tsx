@@ -1,7 +1,6 @@
 import { Box, Button, Flex, FormControl, FormLabel, Input, InputGroup, InputLeftElement, Select, Switch, Text, Textarea } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import styled from "styled-components";
-import * as Yup from 'yup';
 import { ICreateDaoModel } from "../../../../types/dao";
 import GZIconDiscord from "../../../atoms/icons/Discord";
 import GZIconGithub from "../../../atoms/icons/Github";
@@ -17,26 +16,20 @@ type Props = {
   chains?: any[];
   categories?: any[];
   initialValues: ICreateDaoModel;
+  validationSchema: any;
   onBack: () => void;
   onSubmit: (values: any) => void;
 };
 
-const CreateDAOSchema = Yup.object().shape({
-  chain: Yup.string()
-    .required('Required'),
-  name: Yup.string()
-    .max(255, 'Too Long!')
-    .required('Required'),
-  about: Yup.string()
-    .max(500, 'Too Long!')
-    .required('Required'),
-  category: Yup.string()
-    .max(255, 'Too Long!')
-    .required('Required'),
-  website: Yup.string().url('Invalid url'),
-});
+const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSchema, onBack, onSubmit }: Props) => {
+  const CustomFieldAvatar = ({ field, form }: any) => (
+    <GZAvatarControl image={field.value} onChange={() => { }} />
+  )
 
-const GZCreateDAO = ({ chains = [], categories = [], initialValues, onBack, onSubmit }: Props) => {
+  const CustomFieldCover = ({ field, form }: any) => (
+    <GZCoverImageControl image={field.value} onChange={() => { }} />
+  )
+
   const CustomFieldChain = ({ field, form }: any) => (
     <StyledSelect
       placeholder="Choose your network"
@@ -183,7 +176,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, onBack, onSu
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={CreateDAOSchema}
+      validationSchema={validationSchema}
       onSubmit={(values, action) => onSubmit(values)}
     >
       {({ errors, touched }) => (
@@ -212,13 +205,15 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, onBack, onSu
                 <GZFieldGroup
                   name="avatar"
                   label="Avatar"
-                  component={GZAvatarControl}
+                  component={CustomFieldAvatar}
                 />
 
                 <GZFieldGroup
                   name="cover"
                   label="Cover image * (1208x380)"
-                  component={GZCoverImageControl}
+                  invalid={errors.cover && touched.cover}
+                  errorMessage={errors.cover}
+                  component={CustomFieldCover}
                 />
 
                 <GZFieldGroup

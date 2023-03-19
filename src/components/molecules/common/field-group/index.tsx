@@ -35,10 +35,14 @@ const StyledFormGroup = styled(Box) <{ errorcls: string, mb: string }>`
   margin-bottom:  ${(props) => props.mb};
   &.invalid{
     .gz-field-label,
-    .gz-field-error{
+    .gz-field-error,
+    .gz-field-file{
       color:#F04438;
     }
-    input, select, textarea{
+    input, 
+    select, 
+    textarea,
+    .gz-field-file{
       border-color:#F04438 !important;
     }
   }
