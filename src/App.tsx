@@ -9,6 +9,7 @@ import GZUserProfileEditPage from "./components/pages/auth/user-profile/edit";
 import { LAYOUT_SETTING } from "./constants";
 import { APP_ROUTE } from "./constants/route";
 import theme from "./theme/config";
+import GZProfilePage from "./components/pages/dao/profile";
 
 const AppLayout = () => (
   <>
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: APP_ROUTE.CREATE_DAO,
         element: <GZCreateDAOPage />,
+      },
+      {
+        path: APP_ROUTE.PROFILE,
+        element: <GZProfilePage />,
       },
     ],
   },
