@@ -1,9 +1,9 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import GZIconUpload20px from "../../../atoms/icons/Upload";
-import GZCoverImage from "../../../molecules/user/cover-image";
+import GZCover from "../../../molecules/common/cover";
 
-type GZUserCoverProps = {
+type Props = {
     src: string;
     alt?: string;
     w?: string;
@@ -12,7 +12,7 @@ type GZUserCoverProps = {
     onUpload?: () => void;
 }
 
-const GZUserCover = ({ src, alt = "", w, h, editable, onUpload }: GZUserCoverProps) => {
+const GZCoverImage = ({ src, alt = "", w, h, editable, onUpload }: Props) => {
     const [isHover, setIsHover] = useState(false);
 
     return <Box
@@ -24,7 +24,7 @@ const GZUserCover = ({ src, alt = "", w, h, editable, onUpload }: GZUserCoverPro
         onMouseLeave={() => setIsHover(false)}
         cursor="pointer"
     >
-        <GZCoverImage src={src} alt={alt} w={w} h={h} />
+        <GZCover src={src} alt={alt} w={w} h={h} />
         {editable ? <Flex
             position='absolute'
             top="0"
@@ -46,4 +46,4 @@ const GZUserCover = ({ src, alt = "", w, h, editable, onUpload }: GZUserCoverPro
     </Box>
 }
 
-export default GZUserCover
+export default GZCoverImage

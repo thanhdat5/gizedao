@@ -6,20 +6,20 @@ const GZIconLogo = () => {
         <path d="M26.9463 0L14.0596 8.73588H17.3171L21.5381 6.00164" fill="url(#paint3_linear_333_22727)" />
         <defs>
             <linearGradient id="paint0_linear_333_22727" x1="0" y1="8" x2="34" y2="8" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#4086FF" />
-                <stop offset="1" stop-color="#48D5FF" />
+                <stop stopColor="#4086FF" />
+                <stop offset="1" stopColor="#48D5FF" />
             </linearGradient>
             <linearGradient id="paint1_linear_333_22727" x1="0" y1="9.29769" x2="14.511" y2="9.29769" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#4086FF" />
-                <stop offset="1" stop-color="#48D5FF" />
+                <stop stopColor="#4086FF" />
+                <stop offset="1" stopColor="#48D5FF" />
             </linearGradient>
             <linearGradient id="paint2_linear_333_22727" x1="20.0215" y1="7.44087" x2="34.0001" y2="7.44087" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#4086FF" />
-                <stop offset="1" stop-color="#48D5FF" />
+                <stop stopColor="#4086FF" />
+                <stop offset="1" stopColor="#48D5FF" />
             </linearGradient>
             <linearGradient id="paint3_linear_333_22727" x1="14.0596" y1="4.36794" x2="26.9463" y2="4.36794" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#4086FF" />
-                <stop offset="1" stop-color="#48D5FF" />
+                <stop stopColor="#4086FF" />
+                <stop offset="1" stopColor="#48D5FF" />
             </linearGradient>
         </defs>
     </svg>

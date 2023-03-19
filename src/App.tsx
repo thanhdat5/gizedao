@@ -1,8 +1,8 @@
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import GZHeader from "./components/organisms/global/header";
-import GZSidebar from "./components/organisms/global/sidebar";
-import GZCreateDAOPage from "./components/pages/auth/create-dao";
+import GZHeader from "./components/organisms/common/header";
+import GZSidebar from "./components/organisms/common/sidebar";
+import GZCreateDAOPage from "./components/pages/dao/create";
 import GZLoginPage from "./components/pages/auth/login";
 import GZUserProfilePage from "./components/pages/auth/user-profile";
 import GZUserProfileEditPage from "./components/pages/auth/user-profile/edit";

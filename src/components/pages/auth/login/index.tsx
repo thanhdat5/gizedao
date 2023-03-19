@@ -2,9 +2,9 @@ import { Box, Button, Flex, Heading, Image, Link, Stack, Text, useDisclosure } f
 import GZIconGoogleColorful from "../../../atoms/icons/GoogleColorful";
 import GZIconMail20px from "../../../atoms/icons/Mail";
 import GZIconTwitterColorful from "../../../atoms/icons/TwitterColorful";
-import GZFormGroup from "../../../molecules/global/form-group";
-import GZSocialLogin from "../../../molecules/global/login-social";
-import GZMessageDialog from "../../../molecules/global/message-dialog";
+import GZFormGroup from "../../../molecules/common/form-group";
+import GZSocialLogin from "../../../molecules/common/login-social";
+import GZMessageDialog from "../../../molecules/common/message-dialog";
 
 const GZLoginPage = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();

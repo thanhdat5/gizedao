@@ -1,5 +1,4 @@
 import { FormControl, FormLabel, Select } from "@chakra-ui/react";
-import { ChangeEvent } from "react";
 
 type GZFormGroupProps = {
   label?: string;

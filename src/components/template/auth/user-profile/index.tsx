@@ -1,11 +1,11 @@
 import { Box, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react"
 import { FaDiscord, FaPlus, FaTelegram, FaTwitter, FaYoutube } from "react-icons/fa"
 import GZIconMore from "../../../atoms/icons/More"
-import GZIconButton from "../../../molecules/global/icon-button"
+import GZIconButton from "../../../molecules/common/icon-button"
 import GZShareProfileButton from "../../../molecules/user/share-profile-button"
 import GZDAOJoined from "../../../organisms/dao/joined-dao"
-import GZUserAvatar from "../../../organisms/user/avatar"
-import GZUserCover from "../../../organisms/user/cover"
+import GZAvatarImage from "../../../organisms/common/avatar"
+import GZCoverImage from "../../../organisms/common/cover"
 
 type GZUserProfileProps = {
     userInfo: any;
@@ -19,9 +19,9 @@ const GZUserProfile = ({ userInfo }: GZUserProfileProps) => {
                 boxShadow="0px 4px 4px rgba(191, 207, 232, 0.04)"
                 borderRadius="12px"
             >
-                <GZUserCover src={userInfo.coverImage} />
+                <GZCoverImage src={userInfo.coverImage} />
                 <Box mt="-72px" ms="32px" position="relative">
-                    <GZUserAvatar size="140px" src={userInfo.avatar} name={userInfo.name} />
+                    <GZAvatarImage size="140px" src={userInfo.avatar} name={userInfo.name} />
                     <Box position="absolute" bottom="0" right="32px" cursor="pointer">
                         <Menu>
                             <MenuButton

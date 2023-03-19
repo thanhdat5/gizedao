@@ -1,9 +1,9 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import GZIconUpload20px from "../../../atoms/icons/Upload";
-import GZAvatarImage from "../../../molecules/user/avatar-image";
+import GZAvatar from "../../../molecules/common/avatar";
 
-type GZUserAvatarProps = {
+type Props = {
     src?: string;
     name?: string;
     size?: string;
@@ -13,7 +13,7 @@ type GZUserAvatarProps = {
     onUpload?: () => void;
 }
 
-const GZUserAvatar = ({ src, name = "", size = "92px", borderWidth = "4px", borderColor = "#242E42", editable, onUpload }: GZUserAvatarProps) => {
+const GZAvatarImage = ({ src, name = "", size = "92px", borderWidth = "4px", borderColor = "#242E42", editable, onUpload }: Props) => {
     const [isHover, setIsHover] = useState(false);
 
     return <Box
@@ -26,7 +26,7 @@ const GZUserAvatar = ({ src, name = "", size = "92px", borderWidth = "4px", bord
         onMouseLeave={() => setIsHover(false)}
         cursor="pointer"
     >
-        <GZAvatarImage src={src} name={name} size={size} borderWidth={borderWidth} borderColor={borderColor} showIcon={!isHover} />
+        <GZAvatar src={src} name={name} size={size} borderWidth={borderWidth} borderColor={borderColor} showIcon={!isHover} />
         {editable ? <Flex
             position='absolute'
             top="0"
@@ -48,4 +48,4 @@ const GZUserAvatar = ({ src, name = "", size = "92px", borderWidth = "4px", bord
     </Box>
 }
 
-export default GZUserAvatar
+export default GZAvatarImage

@@ -1,9 +1,9 @@
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import GZIconArrowDown from "../../../atoms/icons/ArrowDown";
 import GZDAOCreateButton from "../../../molecules/dao/dao-create-button";
 import GZDAOSmallCard from "../../../molecules/dao/dao-small-card";
-import GZDivider from "../../../molecules/global/divider";
+import GZDivider from "../../../molecules/common/divider";
 
 type GZDAOJoinedProps = {
   daos?: any[];

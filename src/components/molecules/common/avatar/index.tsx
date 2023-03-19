@@ -10,7 +10,7 @@ type GZAvatarImageProps = {
     showIcon?: boolean;
 }
 
-const GZAvatarImage = ({ src, name = "", size = "92px", borderWidth = "4px", borderColor = "#242E42", showIcon = true }: GZAvatarImageProps) => {
+const GZAvatar = ({ src, name = "", size = "92px", borderWidth = "4px", borderColor = "#242E42", showIcon = true }: GZAvatarImageProps) => {
     return <Flex
         borderRadius="50%"
         background="#242E42"
@@ -28,4 +28,4 @@ const GZAvatarImage = ({ src, name = "", size = "92px", borderWidth = "4px", bor
             </>}
     </Flex>
 }
-export default GZAvatarImage 
+export default GZAvatar

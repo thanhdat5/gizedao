@@ -11,10 +11,10 @@ import GZIconProfile from "../../../atoms/icons/Profile";
 import GZIconSettings from "../../../atoms/icons/Settings";
 import GZIconWhiteMode from "../../../atoms/icons/WhiteMode";
 import GZDaoInfo from "../../../molecules/dao/dao-info";
-import GZDivider from "../../../molecules/global/divider";
-import GZIconButton from "../../../molecules/global/icon-button";
-import GZLogoImageButton from "../../../molecules/global/logo-image-button";
-import GZMenuItem from "../../../molecules/global/menu-item";
+import GZDivider from "../../../molecules/common/divider";
+import GZIconButton from "../../../molecules/common/icon-button";
+import GZLogoImageButton from "../../../molecules/common/logo-image-button";
+import GZMenuItem from "../../../molecules/common/menu-item";
 import GZUserImageButton from "../../../molecules/user/user-image-button";
 
 const GZSidebar = () => {
@@ -50,7 +50,7 @@ const GZSidebar = () => {
         <Box height="81px">
             <GZDivider spacing="16px" />
             <Menu placement="right">
-                <MenuButton>
+                <MenuButton as="div" cursor="pointer">
                     <GZUserImageButton src="https://static.fotor.com/app/features/img/aiimage/scenes/a%20realistic%20fox%20in%20the%20lake%20generated%20by%20ai%20image%20creator.png" />
                 </MenuButton>
                 <MenuList
