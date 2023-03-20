@@ -75,7 +75,7 @@ const GZEditProfile = ({
         children="app.gizedao.com/users/"
       />
       <StyledInput
-        pl="272px"
+        pl="210px"
         placeholder="Enter your public URL"
         value={field.value}
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}

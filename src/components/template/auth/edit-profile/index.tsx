@@ -2,7 +2,7 @@ import { Box, Flex, Grid, GridItem, Spacer, Text } from "@chakra-ui/react";
 import { NavLink, Outlet } from "react-router-dom";
 import GZIconBellActive from "../../../atoms/icons/BellActive";
 import GZIconIntegrations from "../../../atoms/icons/Integrations";
-import GIZProfile2 from "../../../atoms/icons/Profile-2";
+import GZIconProfileCircle from "../../../atoms/icons/ProfileCircle";
 import GZDivider from "../../../molecules/common/divider";
 
 const GZEditUserProfile = () => {
@@ -28,7 +28,7 @@ const GZEditUserProfile = () => {
               to="/edit-profile"
             >
               <Flex padding="8px">
-                <GIZProfile2 />
+                <GZIconProfileCircle />
                 <Text marginLeft="11px">My profile</Text>
               </Flex>
             </NavLink>

@@ -7,6 +7,7 @@ import GZLoginPage from "./components/pages/auth/login";
 import GZUserProfilePage from "./components/pages/auth/user-profile";
 import GZCreateDAOPage from "./components/pages/dao/create";
 import GZDAOProfilePage from "./components/pages/dao/profile";
+import GZDAOTreasuryPage from "./components/pages/dao/treasury";
 import GZEditUserProfile from "./components/template/auth/edit-profile";
 import { LAYOUT_SETTING } from "./constants";
 import { APP_ROUTE } from "./constants/route";
@@ -57,8 +58,12 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: APP_ROUTE.PROFILE,
+        path: APP_ROUTE.DAO_PROFILE,
         element: <GZDAOProfilePage />,
+      },
+      {
+        path: APP_ROUTE.DAO_TREASURY,
+        element: <GZDAOTreasuryPage />,
       },
     ],
   },
