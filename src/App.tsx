@@ -1,5 +1,9 @@
 import { Box, ChakraProvider } from "@chakra-ui/react";
+import HttpProvider from "providers/http-context";
+import { Suspense } from "react";
+import { Provider } from "react-redux";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { store } from "store/store";
 import GZHeader from "./components/organisms/common/header";
 import GZSidebar from "./components/organisms/common/sidebar";
 import GZEditProfilePage from "./components/pages/auth/edit-profile/form";
@@ -71,6 +75,11 @@ const router = createBrowserRouter([
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <RouterProvider router={router} />
+    <Suspense fallback={<div>Loading・・・</div>}></Suspense>
+    <Provider store={store}>
+      <HttpProvider>
+        <RouterProvider router={router} />
+      </HttpProvider>
+    </Provider>
   </ChakraProvider>
 );

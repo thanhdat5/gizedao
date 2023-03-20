@@ -1,18 +1,9 @@
 import {
     Box,
     Button,
-    Card,
-    CardBody,
-    CardHeader,
-    Center,
+    Card, Center,
     Flex,
-    Input,
-    Modal,
-    ModalBody,
-    ModalCloseButton,
-    ModalContent, ModalHeader,
-    ModalOverlay,
-    Text
+    Input, Text
 } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import * as Yup from 'yup';

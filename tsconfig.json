@@ -1,26 +1,45 @@
 {
+  "exclude": [
+    "./node_modules",
+  ],
+  "include": [
+    "./src",
+  ],
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": "./src/",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "declaration": true,
+    "jsx": "react-jsx",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ],
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "types": ["jest"],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noEmit": true
   },
-  "include": [
-    "src"
-  ]
+  "extends": "./global/tsconfig.extends.json"
 }

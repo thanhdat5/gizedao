@@ -4,18 +4,11 @@ import {
   Flex,
   Input,
   Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
+  ModalBody, ModalContent,
   ModalHeader,
   ModalOverlay,
-  Text,
-  useToast,
+  Text
 } from "@chakra-ui/react";
-import { Form, Formik } from "formik";
-import * as Yup from "yup";
-import GZFieldGroup from "../../../molecules/common/field-group";
-import React from "react";
 type Props = {
   label?: string;
   value?: string;

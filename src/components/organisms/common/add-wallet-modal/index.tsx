@@ -1,4 +1,4 @@
-import { Button, Flex, Input, Menu, MenuButton, MenuItem, MenuList, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Text } from "@chakra-ui/react";
+import { Button, Input, Menu, MenuButton, MenuItem, MenuList, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Text } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import styled from "styled-components";
 import { IWalletConfig, IWalletNetwork } from "../../../../types/wallet";
