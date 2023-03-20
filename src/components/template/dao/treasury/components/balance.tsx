@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
-import { IWalletAsset } from "../../../../../types/wallet";
+import { IWalletAsset } from "types/wallet";
 
 type Props = {
     balance: string;

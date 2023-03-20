@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { IWallet, IWalletAsset, IWalletConfig, IWalletNetwork } from "../../../../types/wallet";
-import GZComingsoonModal from "../../../molecules/common/comingsoon-modal";
-import GZAddWalletModal from "../../../organisms/common/add-wallet-modal";
-import GZConnectWalletModal from "../../../organisms/common/connect-wallet-modal";
-import GZDAOTreasury from "../../../template/dao/treasury";
+import { IWallet, IWalletAsset, IWalletConfig, IWalletNetwork } from "types/wallet";
+import GZComingsoonModal from "components/molecules/common/comingsoon-modal";
+import GZAddWalletModal from "components/organisms/common/add-wallet-modal";
+import GZConnectWalletModal from "components/organisms/common/connect-wallet-modal";
+import GZDAOTreasury from "components/template/dao/treasury";
 import * as Yup from 'yup';
 
 const GZDAOTreasuryPage = () => {

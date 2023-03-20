@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/react'
-import React from 'react'
+import GZIconButton from 'components/molecules/common/icon-button'
 import { FaDiscord, FaGithub, FaInstagram, FaTelegram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import GZIconButton from '../../common/icon-button'
+
 
 type GZIconProfileProps = {
     w?: string,

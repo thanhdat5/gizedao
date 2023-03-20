@@ -1,6 +1,6 @@
 import { Box, Flex, Table, TableContainer, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react"
-import { IWalletAsset } from "../../../../../types/wallet";
-import GZWalletImage from "../../../../molecules/common/wallet-image";
+import { IWalletAsset } from "types/wallet";
+import GZWalletImage from "components/molecules/common/wallet-image";
 
 type Props = {
     assets?: IWalletAsset[];

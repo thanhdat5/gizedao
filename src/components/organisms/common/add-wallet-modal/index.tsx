@@ -1,9 +1,9 @@
 import { Button, Input, Menu, MenuButton, MenuItem, MenuList, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Text } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import styled from "styled-components";
-import { IWalletConfig, IWalletNetwork } from "../../../../types/wallet";
-import GZFieldGroup from "../../../molecules/common/field-group";
-import GZNetworkItem from "../../../molecules/common/network-item";
+import GZFieldGroup from "components/molecules/common/field-group";
+import GZNetworkItem from "components/molecules/common/network-item";
+import { IWalletConfig, IWalletNetwork } from "types/wallet";
 
 type Props = {
     title: string;

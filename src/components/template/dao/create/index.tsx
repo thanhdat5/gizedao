@@ -14,16 +14,16 @@ import {
 } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import styled from "styled-components";
-import { ICreateDaoModel } from "../../../../types/dao";
-import GZIconDiscord from "../../../atoms/icons/Discord";
-import GZIconGithub from "../../../atoms/icons/Github";
-import GZIconInstagram from "../../../atoms/icons/Instagram";
-import GZIconSocialWebsite from "../../../atoms/icons/SocialWebsite";
-import GZIconTelegram from "../../../atoms/icons/Telegram";
-import GZIconTwitter from "../../../atoms/icons/Twitter";
-import GZAvatarControl from "../../../molecules/common/avatar-control";
-import GZCoverImageControl from "../../../molecules/common/cover-control";
-import GZFieldGroup from "../../../molecules/common/field-group";
+import { ICreateDaoModel } from "types/dao";
+import GZIconDiscord from "components/atoms/icons/Discord";
+import GZIconGithub from "components/atoms/icons/Github";
+import GZIconInstagram from "components/atoms/icons/Instagram";
+import GZIconSocialWebsite from "components/atoms/icons/SocialWebsite";
+import GZIconTelegram from "components/atoms/icons/Telegram";
+import GZIconTwitter from "components/atoms/icons/Twitter";
+import GZAvatarControl from "components/molecules/common/avatar-control";
+import GZCoverImageControl from "components/molecules/common/cover-control";
+import GZFieldGroup from "components/molecules/common/field-group";
 
 type Props = {
   chains?: any[];

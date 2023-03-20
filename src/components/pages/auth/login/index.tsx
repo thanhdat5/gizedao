@@ -3,12 +3,12 @@ import GZConnectWalletModal from "components/organisms/common/connect-wallet-mod
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IWallet } from "types/wallet";
-import GZIconGoogleColorful from "../../../atoms/icons/GoogleColorful";
-import GZIconMail20px from "../../../atoms/icons/Mail";
-import GZIconTwitterColorful from "../../../atoms/icons/TwitterColorful";
-import GZFormGroup from "../../../molecules/common/form-group";
-import GZSocialLogin from "../../../molecules/common/login-social";
-import GZMessageDialog from "../../../molecules/common/message-dialog";
+import GZIconGoogleColorful from "components/atoms/icons/GoogleColorful";
+import GZIconMail20px from "components/atoms/icons/Mail";
+import GZIconTwitterColorful from "components/atoms/icons/TwitterColorful";
+import GZFormGroup from "components/molecules/common/form-group";
+import GZSocialLogin from "components/molecules/common/login-social";
+import GZMessageDialog from "components/molecules/common/message-dialog";
 
 const GZLoginPage = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();

@@ -6,8 +6,8 @@ import {
     ModalOverlay,
     Text
 } from "@chakra-ui/react";
-import { IWallet } from "../../../../types/wallet";
-import GZWalletCard from "../../../molecules/common/wallet-card";
+import { IWallet } from "types/wallet";
+import GZWalletCard from "components/molecules/common/wallet-card";
 
 type Props = {
     wallets?: IWallet[];

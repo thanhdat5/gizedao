@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { useState } from "react";
-import GZIconUpload20px from "../../../atoms/icons/Upload";
-import GZCover from "../../../molecules/common/cover";
+import GZIconUpload20px from "components/atoms/icons/Upload";
+import GZCover from "components/molecules/common/cover";
 
 type Props = {
   src: string;

@@ -1,5 +1,5 @@
 import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ICounterRequest } from '../../../types/counter';
+import { ICounterRequest } from 'types/counter';
 import { prefix } from './constants';
 
 export interface CounterState {

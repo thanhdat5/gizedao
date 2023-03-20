@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
-import GZWalletImage from "../../../../molecules/common/wallet-image";
+import GZWalletImage from "components/molecules/common/wallet-image";
 
 type Props = {
     addedWallets?: any[];

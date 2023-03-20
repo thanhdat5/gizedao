@@ -1,9 +1,10 @@
 import { Box, Flex, Grid, GridItem, Spacer, Text } from "@chakra-ui/react";
 import { NavLink, Outlet } from "react-router-dom";
-import GZIconBellActive from "../../../atoms/icons/BellActive";
-import GZIconIntegrations from "../../../atoms/icons/Integrations";
-import GZIconProfileCircle from "../../../atoms/icons/ProfileCircle";
-import GZDivider from "../../../molecules/common/divider";
+import GZIconBellActive from "components/atoms/icons/BellActive";
+import GZIconIntegrations from "components/atoms/icons/Integrations";
+import GZIconProfileCircle from "components/atoms/icons/ProfileCircle";
+import GZDivider from "components/molecules/common/divider";
+import { APP_ROUTE } from "constants/route";
 
 const GZEditUserProfile = () => {
   return (
@@ -25,7 +26,7 @@ const GZEditUserProfile = () => {
                 borderRadius: "5px",
               })}
               className={(isActive) => (isActive ? "active" : "")}
-              to="/edit-profile"
+              to={`/${APP_ROUTE.EDIT_PROFILE}/my-profile`}
             >
               <Flex padding="8px">
                 <GZIconProfileCircle />
@@ -39,7 +40,7 @@ const GZEditUserProfile = () => {
                 borderRadius: "5px",
               })}
               className={(isActive) => (isActive ? "active" : "")}
-              to="/notification"
+              to={`/${APP_ROUTE.EDIT_PROFILE}/notification`}
             >
               <Flex padding="8px">
                 <GZIconBellActive />
@@ -55,7 +56,7 @@ const GZEditUserProfile = () => {
                 borderRadius: "5px",
               })}
               className={(isActive) => (isActive ? "active" : "")}
-              to=""
+              to={`/${APP_ROUTE.EDIT_PROFILE}/integration`}
             >
               <Flex padding="8px">
                 <GZIconIntegrations />

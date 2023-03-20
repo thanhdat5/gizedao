@@ -1,5 +1,5 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
-import GZIconProfile from "../../../atoms/icons/Profile";
+import GZIconProfile from "components/atoms/icons/Profile";
 
 type GZDAOSmallCardProps = {
     data: any;

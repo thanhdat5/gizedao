@@ -1,7 +1,6 @@
 import { Flex } from '@chakra-ui/react'
-import React from 'react'
-import GZIconProfile from '../../../../molecules/profile/icon-profile'
-import GZNavProfile from '../../../../molecules/profile/nav-profile'
+import GZIconProfile from 'components/molecules/profile/icon-profile'
+import GZNavProfile from 'components/molecules/profile/nav-profile'
 
 
 const GZListProfile = () => {

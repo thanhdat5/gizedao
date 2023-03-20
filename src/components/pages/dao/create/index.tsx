@@ -1,7 +1,7 @@
+import GZInvitationCodeModal from "components/organisms/common/invitation-code-modal";
+import GZCreateDAO from "components/template/dao/create";
 import { useState } from "react";
-import { ICreateDaoModel } from "../../../../types/dao";
-import GZInvitationCodeModal from "../../../organisms/common/invitation-code-modal";
-import GZCreateDAO from "../../../template/dao/create";
+import { ICreateDaoModel } from "types/dao";
 import * as Yup from 'yup';
 
 const GZCreateDAOPage = () => {

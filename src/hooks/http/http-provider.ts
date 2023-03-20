@@ -1,9 +1,9 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { useCallback } from 'react';
-import HttpConfig from '../../library/axios/http-config';
-import { errorInterceptor } from '../../library/axios/http-error.interceptor';
-import { responseInterceptor } from '../../library/axios/http-response.interceptors';
-import { useSetHttpContext } from '../../providers/http-context';
+import HttpConfig from 'library/axios/http-config';
+import { errorInterceptor } from 'library/axios/http-error.interceptor';
+import { responseInterceptor } from 'library/axios/http-response.interceptors';
+import { useSetHttpContext } from 'providers/http-context';
 
 export type ResponseMessage = {
 	content?: string;

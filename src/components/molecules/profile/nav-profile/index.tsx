@@ -1,9 +1,9 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
-import GZIconProfile1 from "../../../atoms/icons/Item-1";
-import GZIconProfile2 from "../../../atoms/icons/Item-2";
-import GZIconProfile3 from "../../../atoms/icons/Item-3";
-import GZIconProfile4 from "../../../atoms/icons/Item-4";
+import GZIconProfile1 from "components/atoms/icons/Item-1";
+import GZIconProfile2 from "components/atoms/icons/Item-2";
+import GZIconProfile3 from "components/atoms/icons/Item-3";
+import GZIconProfile4 from "components/atoms/icons/Item-4";
 import styled from "styled-components";
 
 const GZNavProfile = () => {

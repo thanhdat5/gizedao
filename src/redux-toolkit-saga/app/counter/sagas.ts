@@ -1,8 +1,8 @@
 import { PayloadAction } from "@reduxjs/toolkit";
 import { all, put, takeLatest } from "redux-saga/effects";
-import { getAllCounter } from "../../../services/app/counter-api";
-import { ResponseListGenerator } from "../../../types/api/common-response.model";
-import { ICounter, ICounterRequest } from "../../../types/counter";
+import { getAllCounter } from "services/app/counter-api";
+import { ResponseListGenerator } from "types/api/common-response.model";
+import { ICounter, ICounterRequest } from "types/counter";
 import { increment, incrementAct, decrement, decrementAct } from "./slice";
 
 function* incrementSaga(action: PayloadAction<ICounterRequest>) {

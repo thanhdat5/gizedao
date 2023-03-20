@@ -7,8 +7,8 @@ import {
 } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import * as Yup from 'yup';
-import GZIconStars from "../../../atoms/icons/Stars";
-import GZFieldGroup from "../../../molecules/common/field-group";
+import GZIconStars from "components/atoms/icons/Stars";
+import GZFieldGroup from "components/molecules/common/field-group";
 
 type Props = {
     placeholder?: string;

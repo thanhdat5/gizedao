@@ -9,7 +9,7 @@ import rootSaga from "./rootSaga";
 // @ts-ignore
 import { ArgumentError, promiseMiddleware } from "@adobe/redux-saga-promise";
 import { combineReducers } from "@reduxjs/toolkit";
-import { rootReducer as appReducers } from "../redux-toolkit-saga";
+import { rootReducer as appReducers } from "redux-toolkit-saga";
 
 const rootReducer = combineReducers(appReducers);
 

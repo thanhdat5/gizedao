@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import * as Yup from 'yup';
-import GZFieldGroup from "../../../molecules/common/field-group";
+import GZFieldGroup from "components/molecules/common/field-group";
 
 type Props = {
     label?: string;

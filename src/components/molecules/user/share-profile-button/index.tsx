@@ -1,5 +1,5 @@
 import { Button, Text } from "@chakra-ui/react";
-import GZIconShare from "../../../atoms/icons/Share";
+import GZIconShare from "components/atoms/icons/Share";
 
 type GZShareProfileButtonProps = {
     onClick?: () => void;

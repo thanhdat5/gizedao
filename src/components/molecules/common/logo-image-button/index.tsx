@@ -1,5 +1,5 @@
 import { Button, Tooltip } from "@chakra-ui/react";
-import GZIconLogo from "../../../atoms/icons/Logo";
+import GZIconLogo from "components/atoms/icons/Logo";
 
 type GZLogoImageButtonProps = {
     tooltip?: string;

@@ -1,7 +1,7 @@
 import { Box, Flex } from "@chakra-ui/react"
-import GZIconBell from "../../../atoms/icons/Bell";
-import GZIconBellActive from "../../../atoms/icons/BellActive";
-import GZIconDot from "../../../atoms/icons/Dot";
+import GZIconBell from "components/atoms/icons/Bell";
+import GZIconBellActive from "components/atoms/icons/BellActive";
+import GZIconDot from "components/atoms/icons/Dot";
 
 type GZNotificationProps = {
     haveNoti?: boolean;

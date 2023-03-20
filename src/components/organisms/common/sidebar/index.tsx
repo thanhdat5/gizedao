@@ -1,21 +1,21 @@
 import { Box, Button, Flex, Menu, MenuButton, MenuList, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { LAYOUT_SETTING } from "constants/layout";
 import { FaToggleOff, FaToggleOn } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { LAYOUT_SETTING } from "../../../../constants";
-import { APP_ROUTE } from "../../../../constants/route";
-import GZIconAdd from "../../../atoms/icons/Add";
-import GZIconDashboard from "../../../atoms/icons/Dashboard";
-import GZIconIntegrations from "../../../atoms/icons/Integrations";
-import GZIconNotification from "../../../atoms/icons/Notification";
-import GZIconProfile from "../../../atoms/icons/Profile";
-import GZIconSettings from "../../../atoms/icons/Settings";
-import GZIconWhiteMode from "../../../atoms/icons/WhiteMode";
-import GZDaoInfo from "../../../molecules/dao/dao-info";
-import GZDivider from "../../../molecules/common/divider";
-import GZIconButton from "../../../molecules/common/icon-button";
-import GZLogoImageButton from "../../../molecules/common/logo-image-button";
-import GZMenuItem from "../../../molecules/common/menu-item";
-import GZUserImageButton from "../../../molecules/user/user-image-button";
+import { APP_ROUTE } from "constants/route";
+import GZIconAdd from "components/atoms/icons/Add";
+import GZIconDashboard from "components/atoms/icons/Dashboard";
+import GZIconIntegrations from "components/atoms/icons/Integrations";
+import GZIconNotification from "components/atoms/icons/Notification";
+import GZIconProfile from "components/atoms/icons/Profile";
+import GZIconSettings from "components/atoms/icons/Settings";
+import GZIconWhiteMode from "components/atoms/icons/WhiteMode";
+import GZDivider from "components/molecules/common/divider";
+import GZIconButton from "components/molecules/common/icon-button";
+import GZLogoImageButton from "components/molecules/common/logo-image-button";
+import GZMenuItem from "components/molecules/common/menu-item";
+import GZDaoInfo from "components/molecules/dao/dao-info";
+import GZUserImageButton from "components/molecules/user/user-image-button";
 
 const GZSidebar = () => {
     const { toggleColorMode } = useColorMode();

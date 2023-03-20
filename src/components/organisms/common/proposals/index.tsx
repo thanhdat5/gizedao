@@ -6,12 +6,11 @@ import {
   CardHeader,
   Flex,
   Tag,
-  Text,
+  Text
 } from "@chakra-ui/react";
-import React from "react";
+import GZIconActive from "components/atoms/icons/Active";
+import GZIconClosed from "components/atoms/icons/Closed";
 import styled from "styled-components";
-import GZIconActive from "../../../atoms/icons/Active";
-import GZIconClosed from "../../../atoms/icons/Closed";
 import GZAvatarImage from "../avatar";
 type GZProposalProps = {
   data?: any;

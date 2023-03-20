@@ -1,6 +1,6 @@
 import { Box, Input } from "@chakra-ui/react";
 import { FormEvent, useState } from 'react';
-import GZIconSearch from "../../../atoms/icons/Search";
+import GZIconSearch from "components/atoms/icons/Search";
 
 type GZSearchProps = {
     w?: string;

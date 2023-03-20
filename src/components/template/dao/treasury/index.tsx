@@ -1,10 +1,10 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import { IWallet, IWalletAsset } from "../../../../types/wallet";
-import GZNoWallet from "../../../organisms/common/no-wallet";
-import GZWalletAction from "./components/action";
+import { IWallet, IWalletAsset } from "types/wallet";
+import GZNoWallet from "components/organisms/common/no-wallet";
 import GZWalletAssets from "./components/assets";
 import GZWalletBalance from "./components/balance";
 import GZWallet from "./components/wallet";
+import GZWalletAction from "./components/action";
 
 type Props = {
     daoName: string;
