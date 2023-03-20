@@ -2,5 +2,5 @@ export const APP_ROUTE = {
   USER_PROFILE: "/user-profile",
   EDIT_PROFILE: "/edit-profile",
   CREATE_DAO: "/create-dao",
-  PROFILE:"/profile"
+  PROFILE: "/dao-profile",
 };

@@ -2,14 +2,15 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import GZHeader from "./components/organisms/common/header";
 import GZSidebar from "./components/organisms/common/sidebar";
-import GZCreateDAOPage from "./components/pages/dao/create";
+import GZEditProfilePage from "./components/pages/auth/edit-profile/form";
 import GZLoginPage from "./components/pages/auth/login";
 import GZUserProfilePage from "./components/pages/auth/user-profile";
-import GZUserProfileEditPage from "./components/pages/auth/user-profile/edit";
+import GZCreateDAOPage from "./components/pages/dao/create";
+import GZDAOProfilePage from "./components/pages/dao/profile";
+import GZEditUserProfile from "./components/template/auth/edit-profile";
 import { LAYOUT_SETTING } from "./constants";
 import { APP_ROUTE } from "./constants/route";
 import theme from "./theme/config";
-import GZProfilePage from "./components/pages/dao/profile";
 
 const AppLayout = () => (
   <>
@@ -37,17 +38,27 @@ const router = createBrowserRouter([
         path: APP_ROUTE.USER_PROFILE,
         element: <GZUserProfilePage />,
       },
-      {
-        path: APP_ROUTE.EDIT_PROFILE,
-        element: <GZUserProfileEditPage />,
-      },
+      // {
+      //   path: APP_ROUTE.EDIT_PROFILE,
+      //   element: <GZUserProfileEditPage />,
+      // },
       {
         path: APP_ROUTE.CREATE_DAO,
         element: <GZCreateDAOPage />,
       },
       {
+        element: <GZEditUserProfile />,
+        children: [
+          {
+            path: APP_ROUTE.EDIT_PROFILE,
+            element: <GZEditProfilePage />,
+            index: true,
+          },
+        ],
+      },
+      {
         path: APP_ROUTE.PROFILE,
-        element: <GZProfilePage />,
+        element: <GZDAOProfilePage />,
       },
     ],
   },

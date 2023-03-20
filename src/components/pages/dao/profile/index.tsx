@@ -1,7 +1,7 @@
 import React from 'react'
 import GZProfile from '../../../template/dao/profile';
 
-const GZProfilePage = () => {
+const GZDAOProfilePage = () => {
     const profileInfo = {
         coverImage: "https://i.ibb.co/br6jLVy/Frame-99552.png",
         avatar: "https://bit.ly/code-beast",
@@ -17,4 +17,4 @@ const GZProfilePage = () => {
     };
 
 
-export default GZProfilePage
+export default GZDAOProfilePage
