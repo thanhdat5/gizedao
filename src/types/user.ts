@@ -1,6 +1,6 @@
 export interface UserModal {
   id: "";
-  coverImage?: string;
+  coverImage: string;
   avatar?: string;
   displayName?: string;
   walletAddr?: string;

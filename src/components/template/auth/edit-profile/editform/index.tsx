@@ -19,6 +19,7 @@ import GZIconTweeter from "../../../../atoms/icons/Twitter";
 import GZIconYoutube from "../../../../atoms/icons/Youtube";
 import GZFieldGroup from "../../../../molecules/common/field-group";
 import GZUserAvatar from "../../../../organisms/common/avatar";
+import GZUserCover from "../../../../organisms/common/cover";
 
 type GZEditProfileProps = {
   isEdit?: boolean;
@@ -35,9 +36,6 @@ const GZEditProfile = ({
   onSubmit,
   validationSchema,
 }: GZEditProfileProps) => {
-  // const [isEdit, setisEdit, initialValues, onSubmit, validationSchema]: any =
-  //   useOutletContext();
-
   const CustomFieldDisplayName = ({ field, form }: any) => (
     <StyledInput
       pl="14px"
@@ -184,7 +182,7 @@ const GZEditProfile = ({
             boxShadow="0px 4px 4px rgba(191, 207, 232, 0.04)"
             borderRadius="12px"
           >
-            {/* <GZUserCover src={initialValues.coverImage} /> */}
+            <GZUserCover src={initialValues.coverImage} />
             <Box mt="-72px" ms="32px" position="relative">
               <GZUserAvatar size="140px" src={initialValues.avatar} />
             </Box>
