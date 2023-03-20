@@ -1,4 +1,17 @@
-import { Box, Button, Flex, FormControl, FormLabel, Input, InputGroup, InputLeftElement, Select, Switch, Text, Textarea } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  FormControl,
+  FormLabel,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Select,
+  Switch,
+  Text,
+  Textarea,
+} from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import styled from "styled-components";
 import { ICreateDaoModel } from "../../../../types/dao";
@@ -21,14 +34,21 @@ type Props = {
   onSubmit: (values: any) => void;
 };
 
-const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSchema, onBack, onSubmit }: Props) => {
+const GZCreateDAO = ({
+  chains = [],
+  categories = [],
+  initialValues,
+  validationSchema,
+  onBack,
+  onSubmit,
+}: Props) => {
   const CustomFieldAvatar = ({ field, form }: any) => (
-    <GZAvatarControl image={field.value} onChange={() => { }} />
-  )
+    <GZAvatarControl image={field.value} onChange={() => {}} />
+  );
 
   const CustomFieldCover = ({ field, form }: any) => (
-    <GZCoverImageControl image={field.value} onChange={() => { }} />
-  )
+    <GZCoverImageControl image={field.value} onChange={() => {}} />
+  );
 
   const CustomFieldChain = ({ field, form }: any) => (
     <StyledSelect
@@ -37,10 +57,12 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
       onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
     >
       {chains.map((option, idx) => (
-        <option key={idx} value={option}>{option}</option>
+        <option key={idx} value={option}>
+          {option}
+        </option>
       ))}
     </StyledSelect>
-  )
+  );
 
   const CustomFieldName = ({ field, form }: any) => (
     <StyledInput
@@ -50,7 +72,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
       value={field.value}
       onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
     />
-  )
+  );
 
   const CustomFieldAbout = ({ field, form }: any) => (
     <StyledTextarea
@@ -58,7 +80,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
       value={field.value}
       onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
     />
-  )
+  );
 
   const CustomFieldCategory = ({ field, form }: any) => (
     <StyledSelect
@@ -67,25 +89,33 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
       onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
     >
       {categories.map((option, idx) => (
-        <option key={idx} value={option}>{option}</option>
+        <option key={idx} value={option}>
+          {option}
+        </option>
       ))}
     </StyledSelect>
-  )
+  );
 
   const CustomFieldWebsite = ({ field, form }: any) => (
     <InputGroup>
       <InputLeftElement children={<GZIconSocialWebsite />} />
-      <StyledInput pl="44px"
+      <StyledInput
+        pl="44px"
         placeholder="e.g.https://espstarter.com"
         value={field.value}
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
       />
     </InputGroup>
-  )
+  );
 
   const CustomFieldPublicUrl = ({ field, form }: any) => (
     <InputGroup>
-      <InputLeftElement color="#fff" pl="14px" w="auto" children="https://app.espstarter.com/dao/" />
+      <InputLeftElement
+        color="#fff"
+        pl="14px"
+        w="auto"
+        children="https://app.espstarter.com/dao/"
+      />
       <StyledInput
         pl="272px"
         placeholder="Enter your public URL"
@@ -93,7 +123,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
       />
     </InputGroup>
-  )
+  );
 
   const CustomFieldTwitter = ({ field, form }: any) => (
     <InputGroup>
@@ -104,7 +134,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
       />
     </InputGroup>
-  )
+  );
 
   const CustomFieldDiscord = ({ field, form }: any) => (
     <InputGroup>
@@ -115,7 +145,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
       />
     </InputGroup>
-  )
+  );
 
   const CustomFieldGithub = ({ field, form }: any) => (
     <InputGroup>
@@ -126,7 +156,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
       />
     </InputGroup>
-  )
+  );
 
   const CustomFieldTelegram = ({ field, form }: any) => (
     <InputGroup>
@@ -137,7 +167,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
       />
     </InputGroup>
-  )
+  );
 
   const CustomFieldInstagram = ({ field, form }: any) => (
     <InputGroup>
@@ -148,7 +178,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}
       />
     </InputGroup>
-  )
+  );
 
   const CustomFieldHideHomepage = ({ field, form }: any) => (
     <FormControl display="flex" alignItems="center" py="6px">
@@ -171,7 +201,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
         Hide space from homepage
       </FormLabel>
     </FormControl>
-  )
+  );
 
   return (
     <Formik
@@ -181,7 +211,7 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
     >
       {({ errors, touched }) => (
         <Form>
-          <Box w="800px" maxW="100%" margin="auto" >
+          <Box w="800px" maxW="100%" margin="auto">
             <Box
               background="#1B2332"
               borderRadius="10px"
@@ -221,14 +251,16 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
                   label="Chain"
                   invalid={errors.chain && touched.chain}
                   errorMessage={errors.chain}
-                  component={CustomFieldChain} />
+                  component={CustomFieldChain}
+                />
 
                 <GZFieldGroup
                   name="name"
                   label="Name *"
                   invalid={errors.name && touched.name}
                   errorMessage={errors.name}
-                  component={CustomFieldName} />
+                  component={CustomFieldName}
+                />
 
                 <GZFieldGroup
                   name="about"
@@ -277,8 +309,15 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
                 <GZFieldGroup name="discord" component={CustomFieldDiscord} />
                 <GZFieldGroup name="github" component={CustomFieldGithub} />
                 <GZFieldGroup name="telegram" component={CustomFieldTelegram} />
-                <GZFieldGroup name="instagram" component={CustomFieldInstagram} />
-                <GZFieldGroup name="hideSpaceFromHomepage" component={CustomFieldHideHomepage} mb="24px" />
+                <GZFieldGroup
+                  name="instagram"
+                  component={CustomFieldInstagram}
+                />
+                <GZFieldGroup
+                  name="hideSpaceFromHomepage"
+                  component={CustomFieldHideHomepage}
+                  mb="24px"
+                />
               </Box>
             </Box>
 
@@ -308,31 +347,31 @@ const GZCreateDAO = ({ chains = [], categories = [], initialValues, validationSc
 export default GZCreateDAO;
 
 const StyledInput = styled(Input)`
-  background: #242E42 !important;
+  background: #242e42 !important;
   border: 1px solid rgba(78, 95, 131, 0.7) !important;
   padding-top: 9px !important;
   padding-bottom: 9px !important;
   padding-right: 14px !important;
   line-height: 150% !important;
   height: 42px !important;
-  &::placeholder{
-    color:#94A7C699 !important;
+  &::placeholder {
+    color: #94a7c699 !important;
   }
 `;
 
 const StyledTextarea = styled(Textarea)`
-  background: #242E42 !important;
+  background: #242e42 !important;
   border: 1px solid rgba(78, 95, 131, 0.7) !important;
   padding: 9px 14px !important;
   line-height: 150% !important;
   height: 66px;
-  &::placeholder{
-    color:#94A7C699 !important;
+  &::placeholder {
+    color: #94a7c699 !important;
   }
 `;
 
 const StyledSelect = styled(Select)`
-  background: #242E42 !important;
+  background: #242e42 !important;
   border: 1px solid rgba(78, 95, 131, 0.7) !important;
   border-radius: 5px !important;
   padding: 9px 14px !important;
@@ -340,4 +379,4 @@ const StyledSelect = styled(Select)`
   line-height: 150% !important;
   height: 42px !important;
   // color:#fff !important;
-`
+`;
