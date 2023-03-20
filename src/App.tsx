@@ -6,7 +6,8 @@ import GZEditProfilePage from "./components/pages/auth/edit-profile/form";
 import GZLoginPage from "./components/pages/auth/login";
 import GZUserProfilePage from "./components/pages/auth/user-profile";
 import GZCreateDAOPage from "./components/pages/dao/create";
-import GZMenuProfileEdit from "./components/template/auth/edit-profile";
+import GZDAOProfilePage from "./components/pages/dao/profile";
+import GZEditUserProfile from "./components/template/auth/edit-profile";
 import { LAYOUT_SETTING } from "./constants";
 import { APP_ROUTE } from "./constants/route";
 import theme from "./theme/config";
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
         element: <GZCreateDAOPage />,
       },
       {
-        element: <GZMenuProfileEdit />,
+        element: <GZEditUserProfile />,
         children: [
           {
             path: APP_ROUTE.EDIT_PROFILE,
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
             index: true,
           },
         ],
+      },
+      {
+        path: APP_ROUTE.PROFILE,
+        element: <GZDAOProfilePage />,
       },
     ],
   },

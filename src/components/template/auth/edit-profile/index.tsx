@@ -5,7 +5,7 @@ import GZIconIntegrations from "../../../atoms/icons/Integrations";
 import GIZProfile2 from "../../../atoms/icons/Profile-2";
 import GZDivider from "../../../molecules/common/divider";
 
-const GZMenuProfileEdit = () => {
+const GZEditUserProfile = () => {
   return (
     <Grid
       h="200px"
@@ -75,4 +75,4 @@ const GZMenuProfileEdit = () => {
     </Grid>
   );
 };
-export default GZMenuProfileEdit;
+export default GZEditUserProfile;
