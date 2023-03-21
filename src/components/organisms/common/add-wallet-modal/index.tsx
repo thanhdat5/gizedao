@@ -1,8 +1,8 @@
-import { Button, Input, Menu, MenuButton, MenuItem, MenuList, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Text } from "@chakra-ui/react";
+import { Button, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Select, Text } from "@chakra-ui/react";
+import GZDropdownList from "components/molecules/common/dropdown-list";
+import GZFieldGroup from "components/molecules/common/field-group";
 import { Form, Formik } from "formik";
 import styled from "styled-components";
-import GZFieldGroup from "components/molecules/common/field-group";
-import GZNetworkItem from "components/molecules/common/network-item";
 import { IWalletConfig, IWalletNetwork } from "types/wallet";
 
 type Props = {
@@ -14,7 +14,6 @@ type Props = {
     onDismiss: () => void;
 }
 
-
 const GZAddWalletModal = ({
     title,
     networks,
@@ -25,68 +24,20 @@ const GZAddWalletModal = ({
 }: Props) => {
     const CustomFieldNetwork = ({ field, form }: any) => {
         const selectedNetwork = networks.find(x => x.name === field.value);
-
-        return <Menu>
-            <MenuButton
-                w="100%"
-                backgroundColor="transparent"
-                p="0"
-                border="1px solid rgba(78, 95, 131, 0.7)"
-                h="32px"
-                as={Button}
-                overflow="hidden"
-                _hover={
-                    {
-                        borderColor: 'rgba(78, 95, 131, 0.7)',
-                    }
-                }
-                _active={
-                    {
-                        backgroundColor: '#242E42',
-                        borderColor: 'rgba(78, 95, 131, 0.7)',
-                        boxShadow: '0 0 0 1px #63b3ed'
-                    }
-                }
-            >
-                <GZNetworkItem
-                    selected
-                    name={selectedNetwork ? selectedNetwork.name : 'All networks'}
-                    image={selectedNetwork ? selectedNetwork.image : ''}
-                    rightIcon={<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 12.8334L5 7.83341L6.16667 6.66675L10 10.5001L13.8333 6.66675L15 7.83341L10 12.8334Z" fill="#BFCFE8" />
-                    </svg>}
-                />
-            </MenuButton>
-            <MenuList
-                w="346px"
-                border="0"
-                p="0"
-                borderRadius="5px"
-                overflow="hidden"
-            >
-                <MenuItem
-                    p="0"
-                    onClick={() => form.setFieldValue(field.name, '')}
-                >
-                    <GZNetworkItem name="All networks" selected={!field.value} />
-                </MenuItem>
-                {
-                    networks.map((n, idx) => (
-                        <MenuItem
-                            key={idx}
-                            p="0"
-                            onClick={() => form.setFieldValue(field.name, n.name)}
-                        >
-                            <GZNetworkItem
-                                image={n.image}
-                                name={n.name}
-                                selected={field.value === n.name}
-                            />
-                        </MenuItem>
-                    ))
-                }
-            </MenuList>
-        </Menu>
+        return <GZDropdownList
+            value={selectedNetwork ? {
+                icon: selectedNetwork.image,
+                value: selectedNetwork.name,
+                label: selectedNetwork.name
+            } : undefined}
+            options={networks.map(n => ({
+                icon: n.image,
+                value: n.name,
+                label: n.name
+            }))}
+            onMenuClick={(opt) => form.setFieldValue(field.name, opt ? opt.value : '')}
+            optionAllText="All networks"
+        />
     };
     const CustomFieldName = ({ field, form }: any) => (
         <StyledSelect

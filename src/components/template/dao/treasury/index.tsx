@@ -5,6 +5,7 @@ import GZWalletAssets from "./components/assets";
 import GZWalletBalance from "./components/balance";
 import GZWallet from "./components/wallet";
 import GZWalletAction from "./components/action";
+import GZDAOTreasuryFilter from "./components/filter";
 
 type Props = {
     daoName: string;
@@ -39,6 +40,7 @@ const GZDAOTreasury = ({
                 description="Here you will see all the DAO's wallets and funds. Add at least one wallet to be able to collect money, track the balance, and initiate a transaction"
                 onAdd={onAddWallet}
             /> : <>
+                <GZDAOTreasuryFilter />
                 <GZWalletBalance
                     balance={walletInfo?.balance}
                     assets={assets}
