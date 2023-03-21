@@ -77,20 +77,44 @@ const GZSidebar = ({
                     </Box>
                     <GZDivider spacing="16px" />
                     <Box px="8px">
-                        <GZMenuItem icon={<GZIconNotification />} label="Notification" />
+                        <GZMenuItem
+                            icon={<GZIconNotification />}
+                            label="Notification"
+                            as={Link}
+                            href={`/${APP_ROUTE.EDIT_PROFILE}/notification`}
+                        />
                         <GZMenuItem icon={<GZIconSettings />} label="Settings" />
                     </Box>
                     <GZDivider spacing="16px" />
                     <Box px="8px">
-                        <GZMenuItem icon={<GZIconIntegrations />} label="Integrations" />
-                        <GZMenuItem icon={<GZIconProfile />} label="Edit profile" as={Link} href={APP_ROUTE.EDIT_PROFILE} />
+                        <GZMenuItem
+                            icon={<GZIconIntegrations />}
+                            label="Integrations"
+                            as={Link}
+                            href={`/${APP_ROUTE.EDIT_PROFILE}/integration`}
+                        />
+                        <GZMenuItem
+                            icon={<GZIconProfile />}
+                            label="Edit profile"
+                            as={Link}
+                            href={APP_ROUTE.EDIT_PROFILE}
+                        />
                     </Box>
                     <GZDivider spacing="16px" />
                     <Box px="8px" mb="12px">
                         <GZMenuItem icon={<GZIconWhiteMode />} rightIcon={<SwitchIcon />} label="White mode" onClick={toggleColorMode} />
                     </Box>
                     <Box px="16px">
-                        <Button variant="outline" colorScheme="gray" w="100%" size="md">Log out</Button>
+                        <Button
+                            variant="outline"
+                            colorScheme="gray"
+                            w="100%"
+                            size="md"
+                            as={Link}
+                            to={'/login'}
+                        >
+                            Log out
+                        </Button>
                     </Box>
                 </MenuList>
             </Menu>

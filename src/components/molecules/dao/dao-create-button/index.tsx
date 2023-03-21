@@ -13,7 +13,7 @@ const GZDAOCreateButton = ({ onClick }: GZDAOSmallCardProps) => {
     <Flex
       gap="12px"
       cursor="pointer"
-      onClick={() => navigate(APP_ROUTE.CREATE_DAO)}
+      onClick={() => navigate(`/${APP_ROUTE.CREATE_DAO}`)}
     >
       <Flex
         alignItems="center"
