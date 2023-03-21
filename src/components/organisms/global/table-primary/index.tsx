@@ -1,7 +1,9 @@
-import { Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr } from "@chakra-ui/react";
-import DataTable from "react-data-table-component";
+import { Box, Menu, MenuButton, MenuList, Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr, useDisclosure } from "@chakra-ui/react";
 import GZIcon3Dot from "../../../atoms/icons/3dots";
-import GZIconDot from "../../../atoms/icons/Dot";
+import GZIconIntegrations from "../../../atoms/icons/Integrations";
+import GZIconSettings from "../../../atoms/icons/Settings";
+import GZDaoInfoAvatar from "../../../molecules/dao/dao-info-avatar";
+import GZMenuItem from "../../../molecules/global/menu-item";
 
 const columns = [
   {
@@ -33,9 +35,10 @@ type GZTablePrimaryProps = {
   onValueChange?: (newValue: string | number) => void;
 };
 const GZTablePrimary = ({ header }: GZTablePrimaryProps) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      {/* <TableContainer>
+      <TableContainer>
         <Table variant="simple" border={0} padding={0}>
           <TableCaption>Imperial to metric conversion factors</TableCaption>
           <Thead>
@@ -48,26 +51,102 @@ const GZTablePrimary = ({ header }: GZTablePrimaryProps) => {
             </Tr>
           </Thead>
           <Tbody>
-            <Tr>
-              <Td>inches</Td>
-              <Td>millimetres (mm)</Td>
-              <Td>25.4</Td>
-              <Td isNumeric>
-                <GZIcon3Dot />
+            <Tr paddingBottom={5} paddingLeft={0} borderBottom={"none"}>
+              <Td paddingBottom={0} paddingLeft={0} borderBottom={"none"}>
+                <GZDaoInfoAvatar
+                  image="https://static.fotor.com/app/features/img/aiimage/scenes/a%20realistic%20fox%20in%20the%20lake%20generated%20by%20ai%20image%20creator.png"
+                  name="2parts"
+                  address="0xF28BA7525...76117749330"
+                />
+              </Td>
+              <Td paddingBottom={0} paddingLeft={0} borderBottom={"none"}>
+                millimetres (mm)
+              </Td>
+              <Td paddingBottom={0} paddingLeft={0} borderBottom={"none"}>
+                25.4
+              </Td>
+              <Td paddingBottom={0} paddingLeft={0} borderBottom={"none"} textAlign="right">
+                <Menu placement="left">
+                  <MenuButton>
+                    <GZIcon3Dot />
+                  </MenuButton>
+                  <MenuList
+                    minW="168px"
+                    borderRadius="5px"
+                    mb="20px"
+                    pt="0"
+                    pb="0"
+                    border="none"
+                    _dark={{
+                      bg: "#1B2332",
+                    }}
+                  >
+                    <Box>
+                      <GZMenuItem icon={<GZIconSettings />} label="Settings" onClick={onOpen} />
+                    </Box>
+                    <Box>
+                      <GZMenuItem icon={<GZIconIntegrations />} label="Integrations" />
+                    </Box>
+                    <Box>
+                      <GZMenuItem icon={<GZIconSettings />} label="Settings" />
+                    </Box>
+                    <Box>
+                      <GZMenuItem icon={<GZIconIntegrations />} label="Integrations" />
+                    </Box>
+                  </MenuList>
+                </Menu>
               </Td>
             </Tr>
-            <Tr>
-              <Td>feet</Td>
-              <Td>centimetres (cm)</Td>
-              <Td>30.48</Td>
-              <Td isNumeric>
-                <GZIcon3Dot />
+            <Tr paddingBottom={5} paddingLeft={0} borderBottom={"none"}>
+              <Td paddingBottom={5} paddingLeft={0} borderBottom={"none"}>
+                <GZDaoInfoAvatar
+                  image="https://static.fotor.com/app/features/img/aiimage/scenes/a%20realistic%20fox%20in%20the%20lake%20generated%20by%20ai%20image%20creator.png"
+                  name="2parts"
+                  address="0xF28BA7525...76117749330"
+                />
+              </Td>
+              <Td paddingBottom={0} paddingLeft={0} borderBottom={"none"}>
+                centimetres (cm)
+              </Td>
+              <Td paddingBottom={0} paddingLeft={0} borderBottom={"none"}>
+                30.48
+              </Td>
+              <Td paddingBottom={0} paddingLeft={0} borderBottom={"none"} textAlign="right">
+                <Menu placement="left">
+                  <MenuButton>
+                    <GZIcon3Dot />
+                  </MenuButton>
+                  <MenuList
+                    minW="168px"
+                    borderRadius="5px"
+                    mb="20px"
+                    pt="0"
+                    pb="0"
+                    border="none"
+                    _dark={{
+                      bg: "#1B2332",
+                    }}
+                  >
+                    <Box>
+                      <GZMenuItem icon={<GZIconSettings />} label="Settings" />
+                    </Box>
+                    <Box>
+                      <GZMenuItem icon={<GZIconIntegrations />} label="Integrations" />
+                    </Box>
+                    <Box>
+                      <GZMenuItem icon={<GZIconSettings />} label="Settings" />
+                    </Box>
+                    <Box>
+                      <GZMenuItem icon={<GZIconIntegrations />} label="Integrations" />
+                    </Box>
+                  </MenuList>
+                </Menu>
               </Td>
             </Tr>
           </Tbody>
         </Table>
-      </TableContainer> */}
-      <DataTable columns={columns} data={data} />
+      </TableContainer>
+      {/* <DataTable columns={columns} data={data} /> */}
     </>
   );
 };

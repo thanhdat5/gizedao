@@ -1,5 +1,6 @@
 import { extendTheme, StyleFunctionProps } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
+import { auto } from "@popperjs/core";
 
 const theme = extendTheme({
   config: {
@@ -22,6 +23,9 @@ const theme = extendTheme({
       },
       "*::placeholder": {
         color: mode("#94A7C6", "whiteAlpha.400")(props),
+      },
+      svg: {
+        margin: auto,
       },
     }),
   },
@@ -88,10 +92,7 @@ const theme = extendTheme({
       },
       variants: {
         solid: (props: any) => ({
-          color: mode(
-            props.colorScheme === "gray" ? "#2d3748" : "#fff",
-            "#fff"
-          )(props),
+          color: mode(props.colorScheme === "gray" ? "#2d3748" : "#fff", "#fff")(props),
         }),
       },
     },
@@ -108,7 +109,7 @@ const theme = extendTheme({
             _placeholder: {
               color: "#94A7C6",
             },
-          }
+          },
         },
       },
       sizes: {

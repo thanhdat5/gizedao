@@ -6,6 +6,7 @@ import GZLoginPage from "./components/pages/auth/login";
 import GZUserMemberPage from "./components/pages/auth/member";
 import GZUserProfilePage from "./components/pages/auth/user-profile";
 import GZUserProfileEditPage from "./components/pages/auth/user-profile/edit";
+import GZUserVotingPage from "./components/pages/auth/voting";
 import { LAYOUT_SETTING } from "./constants";
 import { APP_ROUTE } from "./constants/route";
 import theme from "./theme/config";
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: APP_ROUTE.MEMBER,
         element: <GZUserMemberPage />,
+      },
+      {
+        path: APP_ROUTE.VOTING,
+        element: <GZUserVotingPage />,
       },
     ],
   },
