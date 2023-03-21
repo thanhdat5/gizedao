@@ -17,7 +17,12 @@ import GZMenuItem from "components/molecules/common/menu-item";
 import GZDaoInfo from "components/molecules/dao/dao-info";
 import GZUserImageButton from "components/molecules/user/user-image-button";
 
-const GZSidebar = () => {
+type Props = {
+    onLogoClick?: () => void;
+}
+const GZSidebar = ({
+    onLogoClick
+}: Props) => {
     const { toggleColorMode } = useColorMode();
     const SwitchIcon = useColorModeValue(FaToggleOn, FaToggleOff)
     return <Flex
@@ -25,7 +30,7 @@ const GZSidebar = () => {
         background="#0F1725"
         height="100vh"
         position='fixed'
-        zIndex={999}
+        zIndex={1001}
         top={0}
         left={0}
         padding="20px 12px"
@@ -34,7 +39,7 @@ const GZSidebar = () => {
         justifyContent="space-between"
     >
         <Box height="65px">
-            <GZLogoImageButton />
+            <GZLogoImageButton onClick={onLogoClick} />
             <GZDivider />
         </Box>
         <Flex

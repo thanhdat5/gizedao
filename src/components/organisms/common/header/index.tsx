@@ -4,18 +4,24 @@ import GZNotification from "components/molecules/common/notification";
 import GZSearch from "components/molecules/common/search";
 import GZWalletButton from "components/molecules/common/wallet-button";
 
-const GZHeader = () => {
+type Props = {
+    expanded?: boolean;
+}
+const GZHeader = ({
+    expanded = false
+}: Props) => {
     return <Flex
         justifyContent="space-between"
         position='fixed'
         zIndex={999}
         top={0}
-        left={LAYOUT_SETTING.SIDEBAR_WIDTH}
+        left={expanded ? `calc(${LAYOUT_SETTING.SIDEBAR_WIDTH} + ${LAYOUT_SETTING.SIDEBAR_EXPAND_WIDTH})` : LAYOUT_SETTING.SIDEBAR_WIDTH}
         background="#0E1420"
         borderBottom="1px solid rgba(78, 95, 131, 0.7)"
         padding="19px 44px"
-        w={`calc(100% - ${LAYOUT_SETTING.SIDEBAR_WIDTH})`}
+        w={`calc(100% - ${LAYOUT_SETTING.SIDEBAR_WIDTH} - ${expanded ? LAYOUT_SETTING.SIDEBAR_EXPAND_WIDTH : 0})`}
         h={LAYOUT_SETTING.HEADER_HEIGHT}
+        transition="all ease-in-out .3s"
     >
         <GZSearch w="574px" placeholder="Search Organization" />
         <Flex gap="16px">
