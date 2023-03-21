@@ -19,7 +19,7 @@ const GZHeader = ({
         background="#0E1420"
         borderBottom="1px solid rgba(78, 95, 131, 0.7)"
         padding="19px 44px"
-        w={`calc(100% - ${LAYOUT_SETTING.SIDEBAR_WIDTH} - ${expanded ? LAYOUT_SETTING.SIDEBAR_EXPAND_WIDTH : 0})`}
+        w={`calc(100% - ${LAYOUT_SETTING.SIDEBAR_WIDTH} - ${expanded ? LAYOUT_SETTING.SIDEBAR_EXPAND_WIDTH : '0px'})`}
         h={LAYOUT_SETTING.HEADER_HEIGHT}
         transition="all ease-in-out .3s"
     >
