@@ -33,7 +33,6 @@ const GZSidebarExpand = ({
             pt="12px"
         >
             <GIZSideBarMenuExpand menuConfigItems={menuConfig}/>
-         
         </Box>
     </Box>
 }

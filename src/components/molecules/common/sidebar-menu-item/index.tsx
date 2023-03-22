@@ -4,10 +4,11 @@ import GIZLockIcon from "components/atoms/icons/Lock"
 type Props = {
     iconLeft?: JSX.Element,
     label?: string,
+    link?: string,
     isLock?: boolean,
     children?: []
 }
-const GZSidebarMenuItem = ({ iconLeft, label, isLock, children }: Props) => {
+const GZSidebarMenuItem = ({ iconLeft, label, link, isLock, children }: Props) => {
     console.log(isLock);
 
     return <>

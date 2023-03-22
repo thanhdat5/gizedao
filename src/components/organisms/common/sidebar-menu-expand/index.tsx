@@ -17,7 +17,13 @@ const GIZSideBarMenuExpand = ({ menuConfigItems }: GIZSideBarMenuExpandInfo) => 
         </AccordionButton>
         <AccordionPanel pb={3}>
           {menuConfigItems?.map((item: any, idx) => (
-            <GZSidebarMenuItem key={idx} iconLeft={item.iconLeft} label={item.label} children={item.children} isLock={item.isLock} />
+            <GZSidebarMenuItem
+              key={idx}
+              iconLeft={item.iconLeft}
+              label={item.label}
+              children={item.children}
+              isLock={item.isLock}
+            />
           ))}
           <Link>
             <Flex alignItems='center' justifyContent='center'>
