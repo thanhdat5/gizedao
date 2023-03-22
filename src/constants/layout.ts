@@ -217,3 +217,16 @@ export const DATA_PROPOSALS = [
 		}
 	}
 ];
+
+export const COUNT_BADGE = [
+  {
+    src: '/images/dao-img.svg',
+    count: 14,
+    tooltip:'Lorem ipsum 1'
+  },
+  {
+    src: '/images/dao-breeder-img.svg',
+    count: 1,
+    tooltip:'Lorem ipsum 2'
+  }
+]

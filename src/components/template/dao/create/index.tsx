@@ -47,7 +47,7 @@ const GZCreateDAO = ({
   );
 
   const CustomFieldCover = ({ field, form }: any) => (
-    <GZCoverImageControl image={field.value} onChange={() => {}} />
+    <GZCoverImageControl text="Choose files to upload" image={field.value} onChange={() => {}} />
   );
 
   const CustomFieldChain = ({ field, form }: any) => (

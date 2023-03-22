@@ -10,9 +10,11 @@ import GZProposalDetailPage from "components/pages/auth/proposal/detail";
 import GZUserProfilePage from "components/pages/auth/user-profile";
 import GZCreateDAOPage from "components/pages/dao/create";
 import GZDAOProfilePage from "components/pages/dao/profile";
+import GZProposalSettingPage from "components/pages/dao/proposal-setting";
 import GZDAOTreasuryPage from "components/pages/dao/treasury";
 import GZEditUserProfile from "components/template/auth/edit-profile";
-import { LAYOUT_SETTING } from "constants/layout";
+import { COUNT_BADGE, LAYOUT_SETTING } from "constants/layout";
+import { MENU_CONFIG } from "constants/menu-config";
 import { APP_ROUTE } from "constants/route";
 import { useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
@@ -21,8 +23,8 @@ import { AppRouteParam } from "router/app-routers";
 const AppLayout = () => {
   const [expanded, setExpanded] = useState(false);
   return <>
-    <GZSidebar onLogoClick={() => setExpanded(!expanded)} />
-    <GZSidebarExpand expanded={expanded} />
+    <GZSidebar countBadge = {COUNT_BADGE}  onLogoClick={() => setExpanded(!expanded)} />
+    <GZSidebarExpand menuConfig={MENU_CONFIG} expanded={expanded} />
     <GZHeader expanded={expanded} />
     <Box
       ms={expanded ? `calc(${LAYOUT_SETTING.SIDEBAR_WIDTH} + ${LAYOUT_SETTING.SIDEBAR_EXPAND_WIDTH})` : LAYOUT_SETTING.SIDEBAR_WIDTH}
@@ -90,6 +92,10 @@ export const appRouter: AppRouteParam[] = [
       {
         path: APP_ROUTE.LIST_PROPOSALs,
         element: <GZProposalPage />,
+      },
+      {
+        path: APP_ROUTE.DAO_PROPOSAL_SETTING,
+        element: <GZProposalSettingPage />
       },
     ],
   },
