@@ -19,7 +19,7 @@ const GZGroupRadio = ({ options, labelButton }: GZGroupRadioProps) => {
 			<Stack mb="30px">
 				{options.map((option: string) => (
 					<Box display="flex" gap="10px" alignItems="center" key={option}>
-						<StyledCircle></StyledCircle>
+						<StyledCircle opacity={selectedOption !== option && "0.6" }/>
 						<StyledRadio onClick={() => setSelectedOption(option)}>
 							{option}
 							{selectedOption === option && <GZWhiteTick />}
