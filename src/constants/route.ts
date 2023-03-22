@@ -6,5 +6,7 @@ export const APP_ROUTE = {
 	DAO_TREASURY: 'dao-treasury',
 	DAO_PROPOSAL_SETTING: 'dao-proposal-setting',
 	PROPOSAL_DETAIL: 'proposal/:proposalId',
-	LIST_PROPOSALs: 'proposals'
+	LIST_PROPOSALs: 'proposals',
+	MEMBER: 'member',
+	VOTING: 'voting'
 };
