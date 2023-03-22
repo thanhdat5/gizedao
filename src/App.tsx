@@ -14,7 +14,7 @@ export const App = () => {
   const router = [...authRouter, ...appRouter];
   return <BrowserRouter>
     <ChakraProvider theme={theme}>
-      <Suspense fallback={<div>Loading・・・</div>}></Suspense>
+      <Suspense fallback={<div>Loading・・・..</div>}></Suspense>
       <Provider store={store}>
         <HttpProvider>
           <AppRoutes routers={router}></AppRoutes>
