@@ -7,6 +7,7 @@ import GZNotificationPage from "components/pages/auth/edit-profile/notification"
 import GZUserProfilePage from "components/pages/auth/user-profile";
 import GZCreateDAOPage from "components/pages/dao/create";
 import GZDAOProfilePage from "components/pages/dao/profile";
+import GZProposalSettingPage from "components/pages/dao/proposal-setting";
 import GZDAOTreasuryPage from "components/pages/dao/treasury";
 import GZEditUserProfile from "components/template/auth/edit-profile";
 import { LAYOUT_SETTING } from "constants/layout";
@@ -75,6 +76,10 @@ export const appRouter: AppRouteParam[] = [
       {
         path: APP_ROUTE.DAO_TREASURY,
         element: <GZDAOTreasuryPage />,
+      },
+      {
+        path: APP_ROUTE.DAO_PROPOSAL_SETTING,
+        element: <GZProposalSettingPage />
       },
     ],
   },
