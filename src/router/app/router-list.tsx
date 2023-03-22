@@ -19,6 +19,8 @@ import { APP_ROUTE } from "constants/route";
 import { useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { AppRouteParam } from "router/app-routers";
+import GZUserMembersPage from "components/pages/dao/members";
+import GZUserVotingPage from "components/pages/dao/voting";
 
 const AppLayout = () => {
   const [expanded, setExpanded] = useState(false);
@@ -97,6 +99,14 @@ export const appRouter: AppRouteParam[] = [
         path: APP_ROUTE.DAO_PROPOSAL_SETTING,
         element: <GZProposalSettingPage />
       },
+			{
+				path: APP_ROUTE.MEMBER,
+				element: <GZUserMembersPage />
+			},
+			{
+				path: APP_ROUTE.VOTING,
+				element: <GZUserVotingPage />
+			}
     ],
   },
 ];
