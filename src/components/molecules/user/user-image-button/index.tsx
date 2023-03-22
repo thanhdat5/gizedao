@@ -7,7 +7,7 @@ type GZLogoImageButtonProps = {
     onClick?: () => void;
 }
 const GZUserImageButton = ({ src, alt, tooltip, onClick }: GZLogoImageButtonProps) => {
-    return <Tooltip label={tooltip}>
+    return <Tooltip hasArrow label={tooltip} placement='auto-start'>
         <Button
             type="button"
             onClick={onClick}

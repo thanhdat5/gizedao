@@ -57,3 +57,16 @@ export const DATA_PROPOSALS = [
       "Proposal made by @vannn on our Discord governance forum. To see and discuss the proposal join: https://discord.gg/daomaker",
   },
 ];
+
+export const COUNT_BADGE = [
+  {
+    src: '/images/dao-img.svg',
+    count: 14,
+    tooltip:'Lorem ipsum 1'
+  },
+  {
+    src: '/images/dao-breeder-img.svg',
+    count: 1,
+    tooltip:'Lorem ipsum 2'
+  }
+]
