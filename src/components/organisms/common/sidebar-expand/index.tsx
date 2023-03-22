@@ -2,12 +2,15 @@ import { Box } from "@chakra-ui/react";
 import GZDivider from "components/molecules/common/divider";
 import GZLogoCard from "components/molecules/common/logo-card";
 import { LAYOUT_SETTING } from "constants/layout";
+import GIZSideBarMenuExpand from "../sidebar-menu-expand";
 
 type Props = {
     expanded?: boolean;
+    menuConfig?:any
 }
 const GZSidebarExpand = ({
-    expanded = false
+    expanded = false,
+    menuConfig
 }: Props) => {
     return <Box
         width={LAYOUT_SETTING.SIDEBAR_EXPAND_WIDTH}
@@ -29,7 +32,8 @@ const GZSidebarExpand = ({
         <Box
             pt="12px"
         >
-
+            <GIZSideBarMenuExpand menuConfigItems={menuConfig}/>
+         
         </Box>
     </Box>
 }

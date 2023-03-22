@@ -16,12 +16,15 @@ import GZLogoImageButton from "components/molecules/common/logo-image-button";
 import GZMenuItem from "components/molecules/common/menu-item";
 import GZDaoInfo from "components/molecules/dao/dao-info";
 import GZUserImageButton from "components/molecules/user/user-image-button";
+import GZDAOIconButtonBadge from "components/molecules/dao/dao-icon-button-badge";
 
 type Props = {
     onLogoClick?: () => void;
+    countBadge?:any
 }
 const GZSidebar = ({
-    onLogoClick
+    onLogoClick,
+    countBadge
 }: Props) => {
     const { toggleColorMode } = useColorMode();
     const SwitchIcon = useColorModeValue(FaToggleOn, FaToggleOff)
@@ -49,6 +52,9 @@ const GZSidebar = ({
             height='calc(100vh - 65px - 81px)'
             gap="8px"
         >
+            {countBadge?.map((item:any,idx:any) =>(
+                <GZDAOIconButtonBadge key={idx} src={item.src} countBadge={item.count} tooltip={item.tooltip}/>
+            ))}
             <GZIconButton icon={<GZIconDashboard />} />
             <GZIconButton icon={<GZIconAdd />} />
         </Flex>
@@ -56,7 +62,7 @@ const GZSidebar = ({
             <GZDivider spacing="16px" />
             <Menu placement="right">
                 <MenuButton as="div" cursor="pointer">
-                    <GZUserImageButton src="https://static.fotor.com/app/features/img/aiimage/scenes/a%20realistic%20fox%20in%20the%20lake%20generated%20by%20ai%20image%20creator.png" />
+                    <GZUserImageButton src="" />
                 </MenuButton>
                 <MenuList
                     minW="300px"
