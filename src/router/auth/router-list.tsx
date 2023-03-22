@@ -5,6 +5,10 @@ export const authRouter: AppRouteParam[] = [
     {
       path: "/",
       element: <GZLoginPage />,
+    },
+    {
+      path: "/login",
+      element: <GZLoginPage />,
     }
   ];
   

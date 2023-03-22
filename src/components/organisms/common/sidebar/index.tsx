@@ -17,7 +17,12 @@ import GZMenuItem from "components/molecules/common/menu-item";
 import GZDaoInfo from "components/molecules/dao/dao-info";
 import GZUserImageButton from "components/molecules/user/user-image-button";
 
-const GZSidebar = () => {
+type Props = {
+    onLogoClick?: () => void;
+}
+const GZSidebar = ({
+    onLogoClick
+}: Props) => {
     const { toggleColorMode } = useColorMode();
     const SwitchIcon = useColorModeValue(FaToggleOn, FaToggleOff)
     return <Flex
@@ -25,7 +30,7 @@ const GZSidebar = () => {
         background="#0F1725"
         height="100vh"
         position='fixed'
-        zIndex={999}
+        zIndex={1001}
         top={0}
         left={0}
         padding="20px 12px"
@@ -34,7 +39,7 @@ const GZSidebar = () => {
         justifyContent="space-between"
     >
         <Box height="65px">
-            <GZLogoImageButton />
+            <GZLogoImageButton onClick={onLogoClick} />
             <GZDivider />
         </Box>
         <Flex
@@ -72,20 +77,44 @@ const GZSidebar = () => {
                     </Box>
                     <GZDivider spacing="16px" />
                     <Box px="8px">
-                        <GZMenuItem icon={<GZIconNotification />} label="Notification" />
+                        <GZMenuItem
+                            icon={<GZIconNotification />}
+                            label="Notification"
+                            as={Link}
+                            href={`/${APP_ROUTE.EDIT_PROFILE}/notification`}
+                        />
                         <GZMenuItem icon={<GZIconSettings />} label="Settings" />
                     </Box>
                     <GZDivider spacing="16px" />
                     <Box px="8px">
-                        <GZMenuItem icon={<GZIconIntegrations />} label="Integrations" />
-                        <GZMenuItem icon={<GZIconProfile />} label="Edit profile" as={Link} href={APP_ROUTE.EDIT_PROFILE} />
+                        <GZMenuItem
+                            icon={<GZIconIntegrations />}
+                            label="Integrations"
+                            as={Link}
+                            href={`/${APP_ROUTE.EDIT_PROFILE}/integration`}
+                        />
+                        <GZMenuItem
+                            icon={<GZIconProfile />}
+                            label="Edit profile"
+                            as={Link}
+                            href={APP_ROUTE.EDIT_PROFILE}
+                        />
                     </Box>
                     <GZDivider spacing="16px" />
                     <Box px="8px" mb="12px">
                         <GZMenuItem icon={<GZIconWhiteMode />} rightIcon={<SwitchIcon />} label="White mode" onClick={toggleColorMode} />
                     </Box>
                     <Box px="16px">
-                        <Button variant="outline" colorScheme="gray" w="100%" size="md">Log out</Button>
+                        <Button
+                            variant="outline"
+                            colorScheme="gray"
+                            w="100%"
+                            size="md"
+                            as={Link}
+                            to={'/login'}
+                        >
+                            Log out
+                        </Button>
                     </Box>
                 </MenuList>
             </Menu>
