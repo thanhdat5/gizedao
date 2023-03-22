@@ -5,6 +5,8 @@ import GZSidebarExpand from "components/organisms/common/sidebar-expand";
 import GZEditProfilePage from "components/pages/auth/edit-profile/form";
 import GZIntegrationPage from "components/pages/auth/edit-profile/integration";
 import GZNotificationPage from "components/pages/auth/edit-profile/notification";
+import GZProposalPage from "components/pages/auth/proposal";
+import GZProposalDetailPage from "components/pages/auth/proposal/detail";
 import GZUserProfilePage from "components/pages/auth/user-profile";
 import GZCreateDAOPage from "components/pages/dao/create";
 import GZDAOProfilePage from "components/pages/dao/profile";
@@ -82,6 +84,14 @@ export const appRouter: AppRouteParam[] = [
       {
         path: APP_ROUTE.DAO_TREASURY,
         element: <GZDAOTreasuryPage />,
+      },
+      {
+        path: APP_ROUTE.PROPOSAL_DETAIL,
+        element: <GZProposalDetailPage />,
+      },
+      {
+        path: APP_ROUTE.LIST_PROPOSALs,
+        element: <GZProposalPage />,
       },
       {
         path: APP_ROUTE.DAO_PROPOSAL_SETTING,
