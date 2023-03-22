@@ -2,7 +2,12 @@ import { Box, Button, Flex, Select, Text } from '@chakra-ui/react'
 import React from 'react'
 import styled from 'styled-components'
 
-const GZHeaderProposal = () => {
+type GZHeaderProposalProps = {
+    isAdd?: boolean;
+    onChangeOption?: any
+}
+
+const GZHeaderProposal = ({isAdd = true, onChangeOption}: GZHeaderProposalProps) => {
   return (
     <Flex alignItems="center" justifyContent="space-between">
         <Box>
@@ -13,12 +18,13 @@ const GZHeaderProposal = () => {
         <Box>
            <Flex gap="30px" alignItems="center">
                 <Box>
-                    <Select defaultValue='All' size="md">
-                        <option value='All'>All</option>
-                        <option value='option2'>Active</option>
-                        <option value='option3'>Closed</option>
+                    <Select defaultValue='All' size="md" onChange={(e) => onChangeOption(e.target.value)}>
+                        <option value='all'>All</option>
+                        <option value='active'>Active</option>
+                        <option value='closed'>Closed</option>
                     </Select>
                 </Box>
+                {isAdd && (
                 <Box>
                     <StyledButton>
                         <StyledTextButton>
@@ -26,6 +32,7 @@ const GZHeaderProposal = () => {
                         </StyledTextButton>
                     </StyledButton>
                 </Box>
+                )}
            </Flex>
         </Box>
     </Flex>

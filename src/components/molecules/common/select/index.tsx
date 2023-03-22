@@ -34,6 +34,7 @@ const GZSelect = ({
             style={{
               background: "#1A2335",
             }}
+            key={option}
           >
             {option}
           </option>
