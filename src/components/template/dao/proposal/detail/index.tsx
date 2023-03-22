@@ -1,8 +1,8 @@
 import { Box, Stack } from "@chakra-ui/react";
 import GZProposalCore from "components/organisms/common/proposals";
-import GZProposalVote from "components/organisms/proposals/form-vote";
-import GZInfo from "components/organisms/proposals/list-info";
-import GZListVote from "components/organisms/proposals/list-voter";
+import GZProposalVote from "components/organisms/dao/proposal/form-vote";
+import GZInfo from "components/organisms/dao/proposal/list-info";
+import GZListVote from "components/organisms/dao/proposal/list-voter";
 import { IProposal } from "types/proposal";
 
 

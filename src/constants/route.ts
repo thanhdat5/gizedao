@@ -7,6 +7,6 @@ export const APP_ROUTE = {
 	DAO_PROPOSAL_SETTING: 'dao-proposal-setting',
 	PROPOSAL_DETAIL: 'proposal/:proposalId',
 	LIST_PROPOSALs: 'proposals',
-	MEMBER: 'member',
+	MEMBER: 'members',
 	VOTING: 'voting'
 };
