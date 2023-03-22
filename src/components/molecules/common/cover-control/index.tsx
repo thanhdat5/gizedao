@@ -2,10 +2,11 @@ import { Box, Image, Input, Text } from "@chakra-ui/react";
 
 type Props = {
     image?: string;
+    text:string
     onChange?: (e: any) => void;
     onRemove?: () => void;
 }
-const GZCoverImageControl = ({ image, onChange, onRemove }: Props) => {
+const GZCoverImageControl = ({ image,text, onChange, onRemove }: Props) => {
     return <Box>
         {
             image ? <>
@@ -77,7 +78,7 @@ const GZCoverImageControl = ({ image, onChange, onRemove }: Props) => {
             </svg>
 
             <Text ml="10px" mb="0" fontSize="14px" color="#BFCFE8">
-                Choose files to upload
+                {text}
             </Text>
 
             <Input
