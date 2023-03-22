@@ -1,6 +1,9 @@
 export const APP_ROUTE = {
-  USER_PROFILE: "/user-profile",
-  EDIT_PROFILE: "/edit-profile",
-  CREATE_DAO: "/create-dao",
-  PROFILE: "/dao-profile",
+	USER_PROFILE: 'user-profile',
+	EDIT_PROFILE: 'edit-profile',
+	CREATE_DAO: 'create-dao',
+	DAO_PROFILE: 'dao-profile',
+	DAO_TREASURY: 'dao-treasury',
+	PROPOSAL_DETAIL: 'proposal/:proposalId',
+	LIST_PROPOSALs: 'proposals'
 };

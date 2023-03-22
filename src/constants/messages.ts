@@ -1,0 +1,1 @@
+export const MSG_1 = "Message 01";

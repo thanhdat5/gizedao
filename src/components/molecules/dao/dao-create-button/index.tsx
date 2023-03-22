@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import { APP_ROUTE } from "../../../../constants/route";
-import GZIconAdd from "../../../atoms/icons/Add";
+import GZIconAdd from "components/atoms/icons/Add";
+import { APP_ROUTE } from "constants/route";
 
 type GZDAOSmallCardProps = {
   onClick?: () => void;

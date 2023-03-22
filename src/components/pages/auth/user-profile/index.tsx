@@ -1,4 +1,4 @@
-import GZUserProfile from "../../../template/auth/user-profile";
+import GZUserProfile from "components/template/auth/user-profile";
 
 const GZUserProfilePage = () => {
   const userInfo = {

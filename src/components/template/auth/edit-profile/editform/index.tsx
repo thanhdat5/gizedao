@@ -9,17 +9,17 @@ import {
 } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 import styled from "styled-components";
-import { UserModal } from "../../../../../types/user";
-import GZIconDiscord from "../../../../atoms/icons/Discord";
-import GZIconInstagram from "../../../../atoms/icons/Instagram";
-import GZIconLinked from "../../../../atoms/icons/Linked";
-import GZIconSocial from "../../../../atoms/icons/Social";
-import GZIconTelegram from "../../../../atoms/icons/Telegram";
-import GZIconTweeter from "../../../../atoms/icons/Twitter";
-import GZIconYoutube from "../../../../atoms/icons/Youtube";
-import GZFieldGroup from "../../../../molecules/common/field-group";
-import GZUserAvatar from "../../../../organisms/common/avatar";
-import GZUserCover from "../../../../organisms/common/cover";
+import { UserModal } from "types/user";
+import GZIconDiscord from "components/atoms/icons/Discord";
+import GZIconInstagram from "components/atoms/icons/Instagram";
+import GZIconLinked from "components/atoms/icons/Linked";
+import GZIconSocial from "components/atoms/icons/Social";
+import GZIconTelegram from "components/atoms/icons/Telegram";
+import GZIconTweeter from "components/atoms/icons/Twitter";
+import GZIconYoutube from "components/atoms/icons/Youtube";
+import GZFieldGroup from "components/molecules/common/field-group";
+import GZUserAvatar from "components/organisms/common/avatar";
+import GZUserCover from "components/organisms/common/cover";
 
 type GZEditProfileProps = {
   isEdit?: boolean;
@@ -75,7 +75,7 @@ const GZEditProfile = ({
         children="app.gizedao.com/users/"
       />
       <StyledInput
-        pl="272px"
+        pl="210px"
         placeholder="Enter your public URL"
         value={field.value}
         onChange={(e: any) => form.setFieldValue(field.name, e.target.value)}

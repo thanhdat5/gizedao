@@ -1,4 +1,4 @@
-import { Box, Image, Input } from "@chakra-ui/react"
+import { Box, Input } from "@chakra-ui/react";
 
 type Props = {
     image?: string;

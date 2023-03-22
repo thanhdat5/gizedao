@@ -1,11 +1,11 @@
 import { Box, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react"
 import { FaDiscord, FaPlus, FaTelegram, FaTwitter, FaYoutube } from "react-icons/fa"
-import GZIconMore from "../../../atoms/icons/More"
-import GZIconButton from "../../../molecules/common/icon-button"
-import GZShareProfileButton from "../../../molecules/user/share-profile-button"
-import GZDAOJoined from "../../../organisms/dao/joined-dao"
-import GZAvatarImage from "../../../organisms/common/avatar"
-import GZCoverImage from "../../../organisms/common/cover"
+import GZIconMore from "components/atoms/icons/More"
+import GZIconButton from "components/molecules/common/icon-button"
+import GZShareProfileButton from "components/molecules/user/share-profile-button"
+import GZDAOJoined from "components/organisms/dao/joined-dao"
+import GZAvatarImage from "components/organisms/common/avatar"
+import GZCoverImage from "components/organisms/common/cover"
 
 type GZUserProfileProps = {
     userInfo: any;

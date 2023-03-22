@@ -1,5 +1,5 @@
 import { Avatar, Flex } from "@chakra-ui/react";
-import GZIconProfile from "../../../atoms/icons/Profile";
+import GZIconProfile from "components/atoms/icons/Profile";
 
 type GZAvatarImageProps = {
     src?: string;

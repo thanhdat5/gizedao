@@ -1,15 +1,15 @@
 import { Box, Flex, Text, useToast } from "@chakra-ui/react"
+import GZIconTick from "components/atoms/icons/tick"
+import GZButtonProfile from "components/molecules/profile/button-profile"
+import GZCardProfile from "components/molecules/profile/card-profile"
+import GZAvatarImage from "components/organisms/common/avatar"
+import GZCoverImage from "components/organisms/common/cover"
+import GZInvitationLinkModal from "components/organisms/common/invitation-link-modal"
+import GZProposalCore from "components/organisms/common/proposals"
+import GZHeaderProposal from "components/organisms/dao/profile/header-proposal"
+import GZListProfile from "components/organisms/dao/profile/list-profile"
+import { DATA_PROPOSALS } from "constants/layout"
 import React from "react"
-import { DATA_PROPOSALS } from "../../../../constants"
-import GZIconTick from "../../../atoms/icons/tick"
-import GZButtonProfile from "../../../molecules/profile/button-profile"
-import GZCardProfile from "../../../molecules/profile/card-profile"
-import GZAvatarImage from "../../../organisms/common/avatar"
-import GZCoverImage from "../../../organisms/common/cover"
-import GZInvitationLinkModal from "../../../organisms/common/invitation-link-modal"
-import GZProposal from "../../../organisms/common/proposals"
-import GZHeaderProposal from "../../../organisms/dao/profile/header-proposal"
-import GZListProfile from "../../../organisms/dao/profile/list-profile"
 
 type GZProfileProps = {
     profileInfo: any;
@@ -87,7 +87,11 @@ const GZProfile = ({ profileInfo ,empty = true,isVerified = false}: GZProfilePro
                     <GZHeaderProposal />
                 </Box>
                 <Box p="32px 24px 0px">
-                       <GZProposal data={DATA_PROPOSALS} />
+                    {
+                        DATA_PROPOSALS.map((item: any) => (
+                            <GZProposalCore item={item} key={item.id}/>
+                        ))
+                    }
                 </Box>
             </Box>
         </Flex>

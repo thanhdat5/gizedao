@@ -1,7 +1,7 @@
 import { Box, Flex, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react";
 import { FaPlus } from "react-icons/fa";
-import GZIconMore from "../../../atoms/icons/More";
-import GZIconProfile from "../../../atoms/icons/Profile";
+import GZIconMore from "components/atoms/icons/More";
+import GZIconProfile from "components/atoms/icons/Profile";
 
 type GZDaoInfoProps = {
     image?: string;

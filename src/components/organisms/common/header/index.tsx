@@ -1,8 +1,8 @@
 import { Flex } from "@chakra-ui/react";
-import { LAYOUT_SETTING } from "../../../../constants";
-import GZNotification from "../../../molecules/common/notification";
-import GZSearch from "../../../molecules/common/search";
-import GZWalletButton from "../../../molecules/common/wallet-button";
+import { LAYOUT_SETTING } from "constants/layout";
+import GZNotification from "components/molecules/common/notification";
+import GZSearch from "components/molecules/common/search";
+import GZWalletButton from "components/molecules/common/wallet-button";
 
 const GZHeader = () => {
     return <Flex

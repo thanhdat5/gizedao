@@ -1,13 +1,42 @@
 import { Box, Button, Flex, Heading, Image, Link, Stack, Text, useDisclosure } from "@chakra-ui/react";
-import GZIconGoogleColorful from "../../../atoms/icons/GoogleColorful";
-import GZIconMail20px from "../../../atoms/icons/Mail";
-import GZIconTwitterColorful from "../../../atoms/icons/TwitterColorful";
-import GZFormGroup from "../../../molecules/common/form-group";
-import GZSocialLogin from "../../../molecules/common/login-social";
-import GZMessageDialog from "../../../molecules/common/message-dialog";
+import GZConnectWalletModal from "components/organisms/common/connect-wallet-modal";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { IWallet } from "types/wallet";
+import GZIconGoogleColorful from "components/atoms/icons/GoogleColorful";
+import GZIconMail20px from "components/atoms/icons/Mail";
+import GZIconTwitterColorful from "components/atoms/icons/TwitterColorful";
+import GZFormGroup from "components/molecules/common/form-group";
+import GZSocialLogin from "components/molecules/common/login-social";
+import GZMessageDialog from "components/molecules/common/message-dialog";
 
 const GZLoginPage = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
+    const navigate = useNavigate();
+    const [showConnectWallet, setShowConnectWallet] = useState(false);
+    const wallets: IWallet[] = [
+        {
+            image: "https://forkast.news/wp-content/uploads/2022/03/NFT-Avatar.png",
+            address: "0xf48ee66374ac63396...91812354e8d9ce385c3930",
+            description: "4 owners · 2 confirmators"
+        },
+        {
+            image: "https://forkast.news/wp-content/uploads/2022/03/NFT-Avatar.png",
+            address: "0xf48ee66374ac63396...91812354e8d9ce385c3930",
+            description: "8 owners · 3 confirmators"
+        },
+        {
+            address: "New M Safe",
+            description: "Create new safe at m-safe.io and bind to DAO "
+        },
+        {
+            address: "New Gnosis Safe",
+            description: "Create new safe at gnosis-safe.io and bind to DAO "
+        }
+    ]
+    const Login = () => {
+        navigate('/user-profile');
+    }
     return <>
         <Stack direction={['column', 'column', 'row']} spacing={0} bg='#0E1420'>
             <Flex
@@ -44,7 +73,7 @@ const GZLoginPage = () => {
                         Welcome back! Please enter your details.
                     </Text>
                     <Box>
-                        <Button size="lg" w="166px">Connect Wallet</Button>
+                        <Button size="lg" w="166px" onClick={() => setShowConnectWallet(true)}>Connect Wallet</Button>
                     </Box>
                     <Box my="8px">
                         <Text color="#BFCFE8">or</Text>
@@ -138,6 +167,16 @@ const GZLoginPage = () => {
             closeText="Confirm"
             onClose={onClose}
         />
+        {
+            showConnectWallet && (
+                <GZConnectWalletModal
+                    wallets={wallets}
+                    onAddAnother={() => { }}
+                    onClick={() => Login()}
+                    onDismiss={() => setShowConnectWallet(false)}
+                />
+            )
+        }
     </>
 }
 export default GZLoginPage;

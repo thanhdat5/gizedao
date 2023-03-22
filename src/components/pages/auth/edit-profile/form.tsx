@@ -1,7 +1,7 @@
+import GZEditProfile from "components/template/auth/edit-profile/editform";
 import { useState } from "react";
+import { UserModal } from "types/user";
 import * as Yup from "yup";
-import { UserModal } from "../../../../types/user";
-import GZEditProfile from "../../../template/auth/edit-profile/editform";
 
 const GZEditProfilePage = () => {
   const initialValues: UserModal = {

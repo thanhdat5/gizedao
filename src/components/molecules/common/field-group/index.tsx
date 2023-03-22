@@ -11,6 +11,7 @@ type Props = {
   mb?: string;
   component: any;
   children?: JSX.Element;
+  size?: "md" | "sm"
 };
 const GZFieldGroup = ({
   name,
@@ -21,11 +22,12 @@ const GZFieldGroup = ({
   mb = "16px",
   component,
   children,
+  size = "md"
 }: Props) => {
   return (
     <StyledFormGroup mb={mb} className={invalid ? "invalid" : ""}>
       {label && (
-        <StyledLabel className="gz-field-label">
+        <StyledLabel size={size} className="gz-field-label">
           {label} {sublabel && <span>{sublabel}</span>}
         </StyledLabel>
       )}
@@ -39,7 +41,7 @@ const GZFieldGroup = ({
 };
 export default GZFieldGroup;
 
-const StyledFormGroup = styled(Box)<{ errorcls: string; mb: string }>`
+const StyledFormGroup = styled(Box) <{ errorcls: string; mb: string }>`
   margin-bottom: ${(props) => props.mb};
   &.invalid {
     .gz-field-label,
@@ -56,13 +58,13 @@ const StyledFormGroup = styled(Box)<{ errorcls: string; mb: string }>`
   }
 `;
 
-const StyledLabel = styled(Text)`
+const StyledLabel = styled(Text)<{ size: "sm" | "md" }>`
   font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
+  font-size: ${(props) => props.size === 'md' ? '16px' : '14px'};
+  line-height: ${(props) => props.size === 'md' ? '150%' : '21px'};
+  letter-spacing: ${(props) => props.size === 'md' ? '0.02em' : '0'};
   color: #bfcfe8;
-  margin-bottom: 6px;
+  margin-bottom: ${(props) => props.size === 'md' ? '6px' : '0'};
   span {
     color: rgba(255, 255, 255, 0.6);
   }

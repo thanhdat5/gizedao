@@ -1,5 +1,4 @@
-import React from 'react'
-import GZProfile from '../../../template/dao/profile';
+import GZProfile from 'components/template/dao/profile';
 
 const GZDAOProfilePage = () => {
     const profileInfo = {
