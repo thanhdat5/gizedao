@@ -1,7 +1,8 @@
 import { Accordion, AccordionButton, AccordionItem, AccordionPanel, Box, Flex, Link, Text } from "@chakra-ui/react";
 import GZIconArrowDown from "components/atoms/icons/ArrowDown";
-import GZSidebarMenuItem from "components/molecules/common/sidebar-menu-item";
+
 import { FaPlus } from "react-icons/fa";
+import GZSidebarMenuItem from "../sidebar-menu-item";
 type GIZSideBarMenuExpandInfo = {
   menuConfigItems?: []
 }
