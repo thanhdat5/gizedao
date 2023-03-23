@@ -1,31 +1,9 @@
 import {
-	Button,
-	Flex,
-	Table,
-	TableCaption,
-	TableContainer,
-	Tbody,
-	Td,
-	Tfoot,
-	Th,
-	Thead,
-	Tr,
-	useDisclosure
+	Flex
 } from '@chakra-ui/react';
-import GZHeaderTable from '../../../organisms/global/header-table';
-import GZTablePrimary from '../../../organisms/global/table-primary';
-import {
-	Modal,
-	ModalOverlay,
-	ModalContent,
-	ModalHeader,
-	ModalFooter,
-	ModalBody,
-	ModalCloseButton
-} from '@chakra-ui/react';
-import GZMessageDialogSuccess from 'components/molecules/common/message-dialog-success';
 import GZMessageDialogCommon from 'components/molecules/common/message-dialog-common';
 import GZMessageDialogMember from 'components/molecules/common/message-dialog-member';
+import GZMessageDialogSuccess from 'components/molecules/common/message-dialog-success';
 
 const GZUserVotingPage = () => {
 	return (

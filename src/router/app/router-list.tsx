@@ -14,13 +14,13 @@ import GZProposalSettingPage from "components/pages/dao/proposal-setting";
 import GZDAOTreasuryPage from "components/pages/dao/treasury";
 import GZEditUserProfile from "components/template/auth/edit-profile";
 import { COUNT_BADGE, LAYOUT_SETTING } from "constants/layout";
-import { MENU_CONFIG } from "constants/menu-config";
 import { APP_ROUTE } from "constants/route";
 import { useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 import { AppRouteParam } from "router/app-routers";
 import GZUserMembersPage from "components/pages/dao/members";
 import GZUserVotingPage from "components/pages/dao/voting";
+import { MENU_CONFIG } from "components/molecules/common/expand-sidebar";
 
 const AppLayout = () => {
   const [expanded, setExpanded] = useState(false);
