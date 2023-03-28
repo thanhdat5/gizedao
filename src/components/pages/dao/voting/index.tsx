@@ -1,31 +1,7 @@
-import {
-	Button,
-	Flex,
-	Table,
-	TableCaption,
-	TableContainer,
-	Tbody,
-	Td,
-	Tfoot,
-	Th,
-	Thead,
-	Tr,
-	useDisclosure
-} from '@chakra-ui/react';
-import GZHeaderTable from '../../../organisms/global/header-table';
-import GZTablePrimary from '../../../organisms/global/table-primary';
-import {
-	Modal,
-	ModalOverlay,
-	ModalContent,
-	ModalHeader,
-	ModalFooter,
-	ModalBody,
-	ModalCloseButton
-} from '@chakra-ui/react';
-import GZMessageDialogSuccess from 'components/molecules/common/message-dialog-success';
+import { Box, Center, Flex } from '@chakra-ui/react';
 import GZMessageDialogCommon from 'components/molecules/common/message-dialog-common';
 import GZMessageDialogMember from 'components/molecules/common/message-dialog-member';
+import GZMessageDialogSuccess from 'components/molecules/common/message-dialog-success';
 
 const GZUserVotingPage = () => {
 	return (
@@ -35,6 +11,7 @@ const GZUserVotingPage = () => {
 					modalBigIcon={true}
 					showModalButtonText="Success Modal"
 					modalHeader="Test"
+					iconHeader="iconSuccess"
 					modalBodyHeading=" You have successfully voted. Thanks for your vote!"
 					modalBodyPara="Votes can be changed while the proposal is active"
 					closeText="Close"
@@ -86,6 +63,14 @@ const GZUserVotingPage = () => {
 					subTitle="They can't Apply to be a member of your organization!"
 					closeText="Cancel"
 					saveText="Ban member"
+				/>
+				<GZMessageDialogMember
+					showModalButtonText="Add Member modal"
+					title="Add Member"
+					closeText="Cancel"
+					saveText="Add member"
+					isCenterTitle={true}
+					isAddForm={true}
 				/>
 			</Flex>
 		</>

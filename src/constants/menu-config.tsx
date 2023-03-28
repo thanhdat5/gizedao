@@ -18,25 +18,25 @@ export const MENU_CONFIG: IMenuConfig[] = [
 	{
 		iconLeft: <GZIconHome />,
 		label: 'Home',
-		link: "/",
-		isLock: true,
+		link: '/',
+		isLock: true
 	},
 	{
 		iconLeft: <GZOrganizationIcon />,
 		label: 'Organization',
-		isLock: true,
+		isLock: true
 	},
 	{
 		iconLeft: <GZProposalIcon />,
 		label: 'Proposals',
 		link: `/${APP_ROUTE.DAO_PROPOSAL_SETTING}`,
-		isLock: true,
+		isLock: true
 	},
 	{
 		iconLeft: <GZIconMembers />,
 		label: 'Members',
-		link: "/members",
-		isLock: true,
+		link: '/members',
+		isLock: true
 	},
 	{
 		iconLeft: <GZIconDiscussion />,
@@ -57,6 +57,6 @@ export const MENU_CONFIG: IMenuConfig[] = [
 	{
 		iconLeft: <GZIconGovernance />,
 		label: 'Governance',
-		isLock: false,
+		isLock: false
 	}
 ];
