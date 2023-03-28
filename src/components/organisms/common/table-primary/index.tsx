@@ -19,31 +19,6 @@ import GZIconSettings from 'components/atoms/icons/Settings';
 import GZMenuItem from 'components/molecules/common/menu-item';
 import GZDaoInfoAvatar from 'components/molecules/dao/dao-info-avatar';
 
-const columns = [
-	{
-		name: "Title"
-		// prettier-ignore
-		// selector: row => row.title,
-	},
-	{
-		name: "Year"
-		// prettier-ignore
-		// selector: row => row.year,
-	}
-];
-const data = [
-	{
-		id: 1,
-		title: 'Beetlejuice',
-		year: '1988'
-	},
-	{
-		id: 2,
-		title: 'Ghostbusters',
-		year: '1984'
-	}
-];
-
 type GZTablePrimaryProps = {
 	header: string[];
 	onValueChange?: (newValue: string | number) => void;
