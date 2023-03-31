@@ -1,6 +1,10 @@
 import GZProfile from 'components/template/dao/profile';
+import { useDispatch, useSelector } from 'react-redux';
+import { useState, useEffect } from "react";
 
 const GZDAOProfilePage = () => {
+  const [isLoading,setIsLoading] = useState(true)
+  
     const profileInfo = {
         coverImage: "https://i.ibb.co/br6jLVy/Frame-99552.png",
         avatar: "https://bit.ly/code-beast",
@@ -10,7 +14,7 @@ const GZDAOProfilePage = () => {
       };
       return (
         <>
-          <GZProfile profileInfo={profileInfo} />
+          {isLoading ? <div>...Loading</div> : <GZProfile profileInfo={profileInfo} />}
         </>
       );
     };

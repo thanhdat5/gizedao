@@ -14,7 +14,7 @@ type Props = {
   value?: string;
   buttonText?: string;
   errorMessage?: string;
-  onChangeInput:any;
+  onChangeInput?:any;
   onCopy: () => void;
   onDismiss: () => void;
 };
