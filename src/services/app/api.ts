@@ -1,4 +1,4 @@
-import { BASE_URL } from './../../constants/endpoints';
+
 import { AxiosResponse, AxiosRequestConfig } from 'axios';
 import axiosClient from 'library/axios/axiosClient';
 export const apiCall = (
@@ -10,7 +10,7 @@ export const apiCall = (
     const config: AxiosRequestConfig = {
         method,
         url,
-        baseURL: BASE_URL
+        // baseURL: BASE_URL
     }
     if(method === "GET"){
         config.params = data

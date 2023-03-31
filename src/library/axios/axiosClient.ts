@@ -9,11 +9,18 @@ const axiosClient = axios.create({
 
 axiosClient.interceptors.request.use(request => {
 	return request;
-});
+},
+	error => {
+		return errorInterceptor(error);
+	}
+);
 
 //response interceptor handler
 axiosClient.interceptors.response.use(
 	response => {
+		if(response.status === 401){
+			////////
+		}
 		return response;
 	},
 	error => {

@@ -1,23 +1,10 @@
 import GZProfile from 'components/template/dao/profile';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from "react";
-import { getNetworkRequest } from 'redux-toolkit-saga/dao-test/dao-reducer';
-import { dataNetwork } from 'redux-toolkit-saga/dao-test/dao-selectors';
 
 const GZDAOProfilePage = () => {
   const [isLoading,setIsLoading] = useState(true)
-  const dispatch = useDispatch()
-  const data = useSelector(dataNetwork)
-  useEffect(() => {
-    dispatch(getNetworkRequest())
-    
-  },[])
-  useEffect(() => {
-    if(data){
-      setIsLoading(false)
-    }
-    console.log(data);
-  },[data])
+  
     const profileInfo = {
         coverImage: "https://i.ibb.co/br6jLVy/Frame-99552.png",
         avatar: "https://bit.ly/code-beast",
